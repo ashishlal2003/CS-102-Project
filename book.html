@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color:paleturquoise;
+        margin:0;
+        font-family: sans-serif;
+    }
+    .book{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        position: absolute;
+        top:150px;
+        left:450px;
+        height:400px;
+        width:420px;
+        background-color: rgb(249, 225, 195);
+        border-radius: 30px;
+        box-shadow: 10px 10px 10px grey;
+    }
+    .name{
+        position:absolute;  
+        left:160px;
+        margin:-40px;
+        border-radius: 10px;
+        border:2.5px solid;
+        padding:10px;
+        text-align:center
+    }
+    .submit{
+        border-radius: 10px;
+        border:3px solid  black;
+        position: absolute;
+        top:250px;
+        left:180px;
+        padding: 10px;
+        background-color: rgb(1, 1, 63);
+        color:white;
+    }
+    .passw{
+        margin:10px;
+        position: absolute;
+        left:115px;
+        border-radius: 4px;
+        border:solid 2px black;
+        padding: 5px;
+    }
+    .email{
+        margin:10px;
+        position: absolute;
+        left:115px;
+        top:157px;  
+        border-radius: 4px;
+        border:solid 2px black;
+        padding: 5px;
+    }
+</style>
+
+</head>
+<body>
+
+<main>
+    <div class="book">
+    <form action="/action.php">
+        <label for id="01">
+            <input class="name" type="text" placeholder="Enter Your Name">
+        </label><br>
+        <label>
+            <p><input class="email" type="text" placeholder="Email-ID"><br>
+            <input class="passw" type="password" placeholder="Enter Your password"></p>
+        </label><br>
+        <label>
+            <input class="submit" type="Submit" name="" value="Submit"></p>
+        </label><br>
+    </form>
+</div>
+    <hr>
+    <br>
+</body>
+
+</html>

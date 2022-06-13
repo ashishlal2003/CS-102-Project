@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking</title>
+<style>
+    *{
+        font-family:sans-serif;
+        margin:0;
+    }
+    .head{
+        background-color: rgb(115, 213, 180);
+        height:8%;
+        width:100%;
+        position: absolute;
+    }
+    .heading{
+        position: relative;
+        top:20%;
+        font-size: 180%;
+        text-align: center;
+        color:white;
+    }
+    .parent{
+        background-color: white;
+        height:85%;
+        width:52%;
+        position: absolute;
+        top:12%;
+        left:24%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .floor{
+        position: relative;
+        left:3%;
+        top:4%;
+        height: 38%;
+        width:29%;
+        background-color:rgb(249, 225, 195);
+        margin:1%;
+        border-radius:5%;
+        
+    }
+    .name{
+        position: absolute;
+        top:30%;
+        left:18%;
+        color:rgb(4, 4, 58);
+        font-size: 1.8vw;
+    }
+    a{
+        text-decoration: none;
+        height:5%;
+        width:20%;
+        border:1px solid black;
+        border-radius:0.7vw; 
+        padding:5%;
+        background-color: rgb(3, 3, 57);
+        color:white;
+        position: absolute;
+        top:50%;
+        left:35%;
+        text-align: center;
+        font-size:1vw;
+        
+    }
+    .m{
+        position: absolute;
+        left:30%;
+    }
+</style>
+</head>
+<body>
+    <div class="head">
+        <p class="heading">Room Booking</p>
+    </div>
+    <div class="parent">
+        <div class="floor">
+            <p class="name">Auditorium 1</p>
+            <a href="./book.html">Book</a>
+        </div>
+        <div class="floor">
+            <p class="name">Auditorium 2</p>
+            <a href="./book.html">Book</a>
+        </div>
+        <div class="floor">
+            <p class="name m">m block</p>
+            <a href="./book.html">Book</a>
+        </div>
+        <div class="floor">
+            <p class="name">Music Room</p>
+            <a href="./book.html">Book</a>
+        </div>
+        <div class="floor">
+            <p class="name">LG Cabin 1</p>
+            <a href="./book.html">Book</a>
+        </div>
+        <div class="floor">
+            <p class="name">LG Cabin 2</p>
+            <a href="./book.html">Book</a>
+        </div>
+    </div>
+</body>
+</html>
