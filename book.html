@@ -67,16 +67,16 @@
 
 <main>
     <div class="book">
-    <form action="/action.php">
+    <form action="/book" method="post">
         <label for id="01">
-            <input class="name" type="text" placeholder="Enter Your Name">
+            <input name="name" type="text" placeholder="Enter Your Name" autocomplete="off">
         </label><br>
         <label>
-            <p><input class="email" type="text" placeholder="Email-ID"><br>
-            <input class="passw" type="password" placeholder="Enter Your password"></p>
+            <p><input name="email" type="text" placeholder="Email-ID"><br>
+            <input name="passw" type="password" placeholder="Enter Your password" autocomplete="off"></p>
         </label><br>
         <label>
-            <input class="submit" type="Submit" name="" value="Submit"></p>
+            <input class="submit" type="Submit" name="" value="Submit" autocomplete="off"></p>
         </label><br>
     </form>
 </div>
