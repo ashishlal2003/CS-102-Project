@@ -1,0 +1,158 @@
+*{
+  line-height: 2;
+  text-decoration: none;
+  font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+/* 508 * 104 */
+
+.title{
+  height: 104px;
+  width: 508px;
+}
+body{
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.baap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.title{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content:space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+    height: 104px;
+}
+.title > ul > li{
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  align-items:center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.change:hover{
+  color: rgb(0, 107, 255);
+}
+
+.insider,.insider2 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: auto;
+    transition: transform .2s;
+}
+.title > ul > li > a {
+    margin: 0px 20px;
+    font-size: 1rem;
+    line-height: 1;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    transition: all 0.2s linear 0s;
+    white-space: nowrap;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.butt {
+    border:none;
+    background-color: rgb(0,107,255);
+    color: white;
+    border-radius: 24px;
+    padding: 8px 16px;
+    font-size: 16px;
+    transition: transform .2s;
+
+}
+
+.butt:hover{
+    /* opacity: 0.6; */
+    transform: scale(1.1);
+}
+
+.butt:active{
+    transform: scale(0.98);
+}
+
+.all {
+  margin: 0;
+  top: 25vh;
+  position: absolute;
+  /* display: grid;
+  grid-template-rows: repeat(4,1fr); */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 50vh;
+}
+.c1,.c2,.c3,.c4{
+  transition: transform .2s;
+}
+.c1:hover{
+    transform: scale(1.1);
+}
+.c2:hover{
+    transform: scale(1.1);
+}
+.c3:hover{
+    transform: scale(1.1);
+}
+.c4:hover{
+    transform: scale(1.1);
+}
+
+.log{
+  transition: transform .2s;
+}
+.log:hover{
+  color: rgb(0, 107, 255);
+  transform: scale(1.1);
+}
+.k{
+  padding: 8px 35px 8px 30px;
+}
+.magic{
+  height: 500px;
+  width: 700px;
+  background-color: #FFFF;
+  border: solid 2px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 30px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.magic2{
+  height: 450px;
+  width: 650px;
+  background-color: blue;
+  border: solid 2px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
