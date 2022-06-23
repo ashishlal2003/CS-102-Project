@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Sign Up</title>
+<style>
+    *{
+    margin:0;
+    font-family: sans-serif;
+    
+}
+.sign_up_box{
+    height: 450px;
+    width:350px;
+    background-color:rgba(30, 143, 255, 0.461);
+    border-radius:30px;
+    position: absolute;
+    left:525px;
+    top:150px;
+    display: flex;
+    justify-content: center;
+
+}
+.sign_up{
+    text-align: center;
+    position: absolute;
+    top:-55px;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color:rgb(57, 57, 57);
+}
+.name_div{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width:350px;
+    position: absolute;
+    top:30px
+}
+.name{
+    height:30px;
+    width:180px;
+    border:None;
+    border-bottom:solid 1.5px black;
+    background-color: rgba(0, 255, 255, 0);
+}
+.name::placeholder{
+    color: black;
+}
+.name:focus{
+    outline:None;
+    border:None;
+    border-bottom:solid 1.5px black;
+    background-color: rgba(0, 255, 255, 0);
+}
+.email_div{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width:350px;
+    position: absolute;
+    top:100px
+}
+.email{
+    width:180px;
+    border:None;
+    border-bottom:solid 1.5px black;
+    background-color: rgba(0, 255, 255, 0);
+}
+.email::placeholder{
+    color:black;
+}
+.email:focus{
+    outline:None;
+    border:None;
+    border-bottom:solid 1.5px black;
+    background-color: rgba(0, 255, 255, 0);
+}
+.password_div{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width:350px;
+    position: absolute;
+    top:170px
+}
+.password{
+    width:180px;
+    border:None;
+    border-bottom:solid 1.5px black;
+    background-color: rgba(0, 255, 255, 0);
+}
+.password::placeholder{
+    color:black;
+}
+.password:focus{
+    outline:None;
+    border:None;
+    border-bottom:solid 1.5px black;
+    background-color: rgba(0, 255, 255, 0);
+}
+.re-password_div{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width:350px;
+    position: absolute;
+    top:240px
+}
+.re-password{
+    width:180px;
+    border:None;
+    border-bottom:solid 1.5px black;
+    background-color: rgba(0, 255, 255, 0);
+}
+.re-password::placeholder{
+    color:black;
+}
+.re-password:focus{
+    outline:None;
+    border:None;
+    border-bottom:solid 1.5px black;
+    background-color: rgba(0, 255, 255, 0);
+}
+.register_div{
+    height:130px;
+    width:350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:290px;
+    flex-direction: column;
+}
+.register{
+    height:30px;
+    width:100px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background-color: rgb(9, 74, 165);
+    color:white;
+    border:None;
+}
+.register:hover{
+    border:None;
+    background-color: rgb(3, 32, 73);
+}
+.sign-in{
+    font-size: 0.8rem;
+}
+.sign-in-link:hover{
+    color: red;
+}
+
+</style>
+</head>
+
+<body>
+    <!-- <img class="background" src="https://hubballidharwadinfra.com/wp-content/uploads/2021/02/iiit-dharwad.jpg"> -->
+    <div class="sign_up_box">
+        <p class="sign_up">Sign Up</p>
+        <div class="name_div">
+            <input class="name" type="text" placeholder="Enter Name">
+        </div>
+        <div class="email_div">
+            <input class="email" type="text" placeholder="Enter email">
+        </div>
+        <div class="password_div">
+            <input class="password" type="password" placeholder="Enter Password">
+        </div>
+        <div class="re-password_div">
+            <input class="re-password" type="password" placeholder="Re-Enter Password">
+        </div>
+        <div class="register_div">
+            <button class="register">Register</button>
+            <p class="sign-in">already have an account? <a class="sign-in-link" href="">Sign-In</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

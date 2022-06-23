@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>testing</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<style>
+    * {
+  line-height: 2;
+  text-decoration: none;
+  font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin-top: 10px;
+}
+
+body {
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.title {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0px auto;
+  height: 104px;
+}
+
+
+.title>ul>li {
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.insider,
+.insider2 {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: auto;
+}
+
+.butt {
+  border: none;
+  background-color: rgb(0, 107, 255);
+  color: white;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 16px;
+  transition: transform .2s;
+  position: relative;
+  top: -5px;
+}
+
+
+.change:hover {
+  color: rgb(0, 107, 255);
+}
+
+.log {
+  transition: transform .2s;
+}
+
+.log:hover {
+  color: rgb(0, 107, 255);
+  transform: scale(1.1);
+}
+
+.butt:hover {
+  transform: scale(1.1);
+}
+
+.butt:active {
+  transform: scale(0.98);
+}
+
+.heading {
+  font-size: 4.20875rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  max-width: 530px;
+  /* text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); */
+}
+
+.highlight {
+  color: rgb(0, 107, 255);
+}
+
+.title2 {
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.title>ul>li>a {
+  margin: 0px 20px;
+  font-size: 1rem;
+  line-height: 1;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  transition: all 0.2s linear 0s;
+  white-space: nowrap;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+
+.c1,
+.c2,
+.c3,
+.c4 {
+  transition: transform .2s;
+}
+
+.c1:hover {
+  transform: scale(1.1);
+}
+
+.c2:hover {
+  transform: scale(1.1);
+}
+
+.c3:hover {
+  transform: scale(1.1);
+}
+
+.c4:hover {
+  transform: scale(1.1);
+}
+
+.loop {
+  margin-right: 100px;
+}
+.floorname{
+  position: absolute;
+  top: 180px;
+  left:67px;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.floors {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 250px;
+  left: 50px;
+}
+
+.buttonfloor {
+  margin-bottom: 16px;
+  height: 40px;
+  width: 120px;
+  background-color: rgb(0, 107, 255);
+  border-radius: 25px;
+  color: white;
+  padding: 6px;
+  border:None;
+  transition: 0.1s linear;
+}
+
+.buttonfloor:hover {
+  transform: scale(1.1);
+  background-color: rgb(1, 66, 156);
+}
+
+.f1 {
+  position: absolute;
+  left: 430px;
+  top: 160px;
+  height: 410px;
+  width: 430px;
+  border: solid 2px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.name {
+  height: 50px;
+  width: 430px;
+  position: absolute;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lower {
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  left: -5px;
+}
+
+.ground1 {
+  color: rgb(1, 66, 156);
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  left: 5px;
+}
+
+.datediv {
+  height: 50px;
+  width: 430px;
+  position: absolute;
+  top: 65px;
+  display: flex;
+  justify-content: center;
+}
+
+.Date {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+#date {
+  border-radius: 5px;
+  border: solid 1px black;
+  text-align: center;
+  width: 110px;
+  color: black;
+}
+
+.timeform{
+  height: 60px;
+  width: 430px;
+  position: absolute;
+  top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timing {
+  height: 60px;
+  width: 320px;
+  background-color: rgb(201, 213, 230);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.from {
+  font-weight: 500;
+  margin: 7px;
+}
+
+.to {
+  font-weight: 500;
+  margin: 7px;
+}
+
+.time_from {
+  border-radius: 5px;
+  border: solid 2px black;
+  margin: 7px;
+}
+
+.time_to {
+  border-radius: 5px;
+  border: solid 2px black;
+  margin: 7px;
+}
+
+.div_classroom_purpose {
+  height: 110px;
+  width: 230px;
+  position: absolute;
+  top: 205px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#purpose {
+  height: 30px;
+  width: 190px;
+  border:None;
+  border-bottom:solid 1.5px black;
+  margin-bottom: 10px;
+}
+
+#purpose:hover {
+  border: None;
+  border-bottom:solid 1.5px grey;
+}
+#purpose::placeholder{
+  color:rgb(63, 63, 63);
+}
+.lgclassrooms {
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  border: solid 1.5px black;
+}
+
+.lgclassrooms:hover {
+  border-bottom: solid 1.5px rgb(101, 101, 101);
+}
+
+.request {
+  position: absolute;
+  top: 245px;
+  left: 297px;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: rgb(0, 107, 255);
+  color: white;
+  border: solid 1px white;
+}
+
+.request:hover {
+  background-color: rgb(98, 145, 211)
+}
+</style>
+
+<body>
+  <div class="title">
+      <a href="https://iiitdwd.ac.in/"><img
+      src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Indian_Institute_of_Information_Technology%2C_Dharwad_Logo.svg/330px-Indian_Institute_of_Information_Technology%2C_Dharwad_Logo.svg.png"
+      height="90px" width="auto"></a>
+      <ul width="auto" class="insider">
+          <li class>
+              <a class="change c1" href="http://localhost:5500/home.html">Home</a>
+          </li>
+          <li class>
+              <a class="change c2" href="http://localhost:5500/booking_page.html">Book</a>
+          </li>
+          <li class>
+              <a class="change c3" href="">Availability</a>
+          </li>
+          <li class>
+              <a class="change c4" href="">Requests</a>
+          </li>
+      </ul>
+      <ul width="auto" class="insider2">
+          <li>
+              <a href="login.html">
+                  <span class="log" onclick="window.location.href = 'http://localhost:5500/login.html';">Log In</span>
+              </a>
+          </li>
+          <li>
+              <div class="but">
+                  <button type="button" class="butt" onclick="window.location.href = 'http://localhost:5500/sign_up.html';">Sign Up</button>
+              </div>
+          </li>
+      </ul>
+  </div>
+
+    <!-- starting of my code ******************************************************-->
+    <p class="floorname">Floors</p>
+    <div class="floors">
+        <button class="buttonfloor">
+            Lower Ground
+        </button>
+        <button class="buttonfloor">
+            Upper Ground
+        </button>
+        <button class="buttonfloor">
+            First Floor
+        </button>
+        <button class="buttonfloor">
+            Second Floor
+        </button>
+    </div>
+    <div class="floor_div f1">
+        <div class="name">
+            <p class="lower">Lower</p>
+            <p class="ground1">Ground</p>
+        </div>
+        <div class="datediv">
+            <p class="Date">Date</p>
+            <input id="date" type="date" name="Date">
+        </div>
+        <div class="timeform">
+            <div class="timing">
+                <label class="from">From :</label>
+                <input class="time_from" type="time">
+                <label class="to">To :</label>
+                <input class="time_to" type="time">
+            </div>
+        </div>
+        <div class="div_classroom_purpose">
+            <textarea id="purpose" placeholder="Purpose..."></textarea>
+            <select class="lgclassrooms" name="Classrooms">
+                <option disabled selected>Classrooms</option>
+                <option value="c002">C002 - 80 Seater (35benches)</option>
+                <option value="c003">C003 - 120 Seater (32benches)</option>
+                <option value="c004">C004 - 240 Seater</option>
+            </select>
+        </div>
+        <button class="request">Request </button>
+
+    </div>
+    <div class="floor_div f2">
+
+    </div>
+    <div class="floor_div f3">
+
+    </div>
+    <div class="floor_div f4">
+
+    </div>
+</body>
+
+</html>
