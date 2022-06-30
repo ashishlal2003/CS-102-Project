@@ -2,424 +2,605 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testing</title>
-<style>
-    * {
-        line-height: 2;
-        text-decoration: none;
-        font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        margin-top: 10px;
-    }
-
-    body {
-        margin: 0;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .title {
-        display: flex;
-        -webkit-box-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        align-items: center;
-        width: 100%;
-        max-width: 1280px;
-        margin: 0px auto;
-        height: 104px;
-    }
-
-
-    .title>ul>li {
-        color: black;
-        font-size: 1rem;
-        display: flex;
-        align-items: center;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-
-    .insider,
-    .insider2 {
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        width: auto;
-    }
-
-    .butt {
-        border: none;
-        background-color: rgb(0, 107, 255);
-        color: white;
-        border-radius: 24px;
-        padding: 8px 16px;
-        font-size: 16px;
-        transition: transform .2s;
-        position: relative;
-        top: -5px;
-    }
-
-
-    .change:hover {
-        color: rgb(0, 107, 255);
-    }
-
-    .log {
-        transition: transform .2s;
-    }
-
-    .log:hover {
-        color: rgb(0, 107, 255);
-        transform: scale(1.1);
-    }
-
-    .butt:hover {
-        transform: scale(1.1);
-    }
-
-    .butt:active {
-        transform: scale(0.98);
-    }
-
-    .heading {
-        font-size: 4.20875rem;
-        line-height: 1;
-        font-weight: 800;
-        letter-spacing: -0.01em;
-        text-align: left;
-        color: rgb(0, 0, 0);
-        max-width: 530px;
-        /* text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); */
-    }
-
-    .highlight {
-        color: rgb(0, 107, 255);
-    }
-
-    .title2 {
-        padding-top: 70px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    .title>ul>li>a {
-        margin: 0px 20px;
-        font-size: 1rem;
-        line-height: 1;
-        color: rgb(0, 0, 0);
-        font-weight: 700;
-        transition: all 0.2s linear 0s;
-        white-space: nowrap;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        align-items: center;
-        border-bottom: 2px solid rgb(255, 255, 255);
-    }
-
-
-    .c1,
-    .c2,
-    .c3,
-    .c4 {
-        transition: transform .2s;
-    }
-
-    .c1:hover {
-        transform: scale(1.1);
-    }
-
-    .c2:hover {
-        transform: scale(1.1);
-    }
-
-    .c3:hover {
-        transform: scale(1.1);
-    }
-
-    .c4:hover {
-        transform: scale(1.1);
-    }
-
-    .loop {
-        margin-right: 100px;
-    }
-
-    .floors {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        top: 230px;
-        left: 50px;
-    }
-
-    .buttonfloor {
-        margin-bottom: 30px;
-        height: 40px;
-        width: 120px;
-        background-color: rgb(0, 107, 255);
-        border-radius: 25px;
-        color: white;
-        padding: 6px;
-        border-color: white;
-        transition: 0.1s linear;
-    }
-
-    .buttonfloor:hover {
-        transform: scale(1.1);
-        background-color: rgb(1, 66, 156);
-    }
-
-    .f1 {
-        position: absolute;
-        left: 430px;
-        top: 187px;
-        height: 410px;
-        width: 430px;
-        border: solid 2px;
-        border-radius: 25px;
-    }
-
-    .name {
-        height: 50px;
-        width: 430px;
-        position: absolute;
-        top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .lower {
-        font-size: 2rem;
-        font-weight: 500;
-        position: relative;
-        left: -5px;
-    }
-
-    .ground1 {
-        color: rgb(1, 66, 156);
-        font-size: 2rem;
-        font-weight: 500;
-        position: relative;
-        left: 5px;
-    }
-
-    .datediv {
-        height: 50px;
-        width: 430px;
-        position: absolute;
-        top: 65px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .Date {
-        font-size: 1.2rem;
-        margin-right: 15px;
-    }
-
-    #date {
-        border-radius: 5px;
-        border: solid 1px black;
-        text-align: center;
-        width: 110px;
-        color: black;
-    }
-
-    .timeform{
-        height: 60px;
-        width: 430px;
-        position: absolute;
-        top: 130px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .timing {
-        height: 60px;
-        width: 320px;
-        background-color: rgb(145, 185, 241);
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .from {
-        font-weight: 500;
-        margin: 7px;
-    }
-
-    .to {
-        font-weight: 500;
-        margin: 7px;
-    }
-
-    .time_from {
-        border-radius: 5px;
-        border: solid 2px black;
-        margin: 7px;
-    }
-
-    .time_to {
-        border-radius: 5px;
-        border: solid 2px black;
-        margin: 7px;
-    }
-
-    .div_classroom_purpose {
-        height: 110px;
-        width: 230px;
-        position: absolute;
-        top: 205px;
-        left: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #purpose {
-        height: 30px;
-        width: 190px;
-        border-radius: 15px;
-        border: solid 1.5px black;
-        border-bottom-right-radius: 0px;
-        margin-bottom: 6px;
-    }
-
-    #purpose:hover {
-        border: solid 1.5px grey;
-    }
-
-    .lgclassrooms {
-        height: 30px;
-        width: 200px;
-        border-radius: 10px;
-        border: solid 1.5px black;
-    }
-
-    .lgclassrooms:hover {
-        border: solid 1.5px rgb(101, 101, 101);
-    }
-
-    .request {
-        position: absolute;
-        top: 245px;
-        left: 297px;
-        height: 40px;
-        width: 100px;
-        border-radius: 20px;
-        background-color: rgb(0, 107, 255);
-        color: white;
-        border: solid 1px white;
-    }
-
-    .request:hover {
-        background-color: rgb(98, 145, 211)
-    }
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trybooking</title>
+  <link rel="stylesheet" href="booking.css">
 </head>
+<style>
+  * {
+    line-height: 2;
+    text-decoration: none;
+    font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin-top: 10px;
+  }
+
+  body {
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .title {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+    height: 104px;
+  }
+
+  .title>ul>li {
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .insider,
+  .insider2 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  .butt {
+    border: none;
+    background-color: rgb(0, 107, 255);
+    color: white;
+    border-radius: 24px;
+    padding: 8px 16px;
+    font-size: 16px;
+    transition: transform .2s;
+    position: relative;
+    top: -5px;
+  }
+
+
+  .change:hover {
+    color: rgb(0, 107, 255);
+  }
+
+  .log {
+    transition: transform .2s;
+  }
+
+  .log:hover {
+    color: rgb(0, 107, 255);
+    transform: scale(1.1);
+  }
+
+  .butt:hover {
+    transform: scale(1.1);
+  }
+
+  .butt:active {
+    transform: scale(0.98);
+  }
+
+  .heading {
+    font-size: 4.20875rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    max-width: 530px;
+    /* text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); */
+  }
+
+  .highlight {
+    color: rgb(0, 107, 255);
+  }
+
+  .title2 {
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .title>ul>li>a {
+    margin: 0px 20px;
+    font-size: 1rem;
+    line-height: 1;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    transition: all 0.2s linear 0s;
+    white-space: nowrap;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+
+
+  .c1,
+  .c2,
+  .c3,
+  .c4 {
+    transition: transform .2s;
+  }
+
+  .c1:hover {
+    transform: scale(1.1);
+  }
+
+  .c2:hover {
+    transform: scale(1.1);
+  }
+
+  .c3:hover {
+    transform: scale(1.1);
+  }
+
+  .c4:hover {
+    transform: scale(1.1);
+  }
+
+  .loop {
+    margin-right: 100px;
+  }
+
+  .floorname {
+    position: absolute;
+    top: 180px;
+    left: 67px;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  @media (max-width:550px) {
+    .floorname {
+      position: absolute;
+      left: 32px;
+    }
+  }
+
+  .floors {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+  }
+
+  @media (max-width:550px) {
+    .floors {
+      position: absolute;
+      left: 15px;
+    }
+  }
+
+  .buttonfloor {
+    margin-bottom: 16px;
+    height: 40px;
+    width: 120px;
+    background-color: rgb(0, 107, 255);
+    border-radius: 25px;
+    color: white;
+    padding: 6px;
+    border: None;
+    transition: 0.1s linear;
+  }
+
+  .buttonfloor:hover {
+    transform: scale(1.1);
+    background-color: rgb(1, 66, 156);
+  }
+
+  .magic {
+    height: 410px;
+    width: 430px;
+    background-color: white;
+    border: solid 2px;
+    position: absolute;
+    left: 470px;
+    top: 160px;
+    border-radius: 25px;
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 20px 20px 20px 20px white, 20px 20px 40px 20px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  @media (max-width:550px) {
+    .magic {
+      position: absolute;
+      left: 170px;
+    }
+  }
+
+  .f1,
+  .f2,
+  .f3,
+  .f4 {
+    position: absolute;
+    left: 470px;
+    top: 160px;
+    height: 410px;
+    width: 430px;
+    border: solid 2px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  @media (max-width:550px) {
+
+    .f1,
+    .f2,
+    .f3,
+    .f4 {
+      position: absolute;
+      left: 170px;
+    }
+  }
+
+  .name {
+    height: 50px;
+    width: 430px;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first_title {
+    font-size: 2rem;
+    font-weight: 500;
+    position: relative;
+    left: -5px;
+  }
+
+  .second_title {
+    color: rgb(1, 66, 156);
+    font-size: 2rem;
+    font-weight: 500;
+    position: relative;
+    left: 5px;
+  }
+
+  .datediv {
+    height: 50px;
+    width: 430px;
+    position: absolute;
+    top: 65px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .Date {
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+
+  #date {
+    border-radius: 5px;
+    border: solid 1px black;
+    text-align: center;
+    width: 110px;
+    color: black;
+  }
+
+  .timeform {
+    height: 60px;
+    width: 430px;
+    position: absolute;
+    top: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timing {
+    height: 60px;
+    width: 320px;
+    background-color: rgb(201, 213, 230);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .from {
+    font-weight: 500;
+    margin: 7px;
+  }
+
+  .to {
+    font-weight: 500;
+    margin: 7px;
+  }
+
+  .time_from {
+    border-radius: 5px;
+    border: solid 2px black;
+    margin: 7px;
+  }
+
+  .time_to {
+    border-radius: 5px;
+    border: solid 2px black;
+    margin: 7px;
+  }
+
+
+  #purpose {
+    position: absolute;
+    top: 295px;
+    left: 50px;
+    height: 30px;
+    width: 190px;
+    border: None;
+    border-bottom: solid 1.5px black;
+    margin-bottom: 10px;
+  }
+
+  #purpose:hover {
+    border: None;
+    border-bottom: solid 1.5px grey;
+  }
+
+  #purpose::placeholder {
+    color: rgb(63, 63, 63);
+  }
+
+  .classrooms_option {
+    position: absolute;
+    top: 135px;
+    left: 115px;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: solid 1.5px black;
+  }
+
+  .classrooms_option:hover {
+    border-bottom: solid 1.5px rgb(101, 101, 101);
+  }
+
+  .request {
+    position: absolute;
+    top: 295px;
+    left: 280px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: rgb(0, 107, 255);
+    color: white;
+    border: solid 1px white;
+  }
+
+  .request:hover {
+    background-color: rgb(98, 145, 211)
+  }
+</style>
 
 <body>
-    <div class="title">
-        <a type="base" class="logo" href="">
-            <div class="logo-wrapper">
-                <img class="logo"
-                    src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Indian_Institute_of_Information_Technology%2C_Dharwad_Logo.svg/330px-Indian_Institute_of_Information_Technology%2C_Dharwad_Logo.svg.png"
-                    height="90px" width="auto">
-            </div>
-        </a>
-        <ul width="auto" class="insider">
-            <li class>
-                <a class="change c1" href="CS_project.html">Home</a>
-            </li>
-            <li class>
-                <a class="change c2" href="CS_project2.html">Book</a>
-            </li>
-            <li class>
-                <a class="change c3" href="">Availability</a>
-            </li>
-            <li class>
-                <a class="change c4" href="">Requests</a>
-            </li>
-        </ul>
-        <ul width="auto" class="insider2">
-            <li>
-                <a href="login.html">
-                    <span class="log">Log In</span>
-                </a>
-            </li>
-            <li>
-                <div class="but">
-                    <button type="button" class="butt">Sign Up</button>
-                </div>
-            </li>
-        </ul>
+  <div class="title">
+    <a href="https://iiitdwd.ac.in/"><img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Indian_Institute_of_Information_Technology%2C_Dharwad_Logo.svg/330px-Indian_Institute_of_Information_Technology%2C_Dharwad_Logo.svg.png"
+        height="90px" width="auto"></a>
+    <ul width="auto" class="insider">
+      <li class>
+        <a class="change c1" href="http://localhost:5500/home.html">Home</a>
+      </li>
+      <li class>
+        <a class="change c2" href="http://localhost:5500/booking_page.html">Book</a>
+      </li>
+      <li class>
+        <a class="change c3" href="">Availability</a>
+      </li>
+      <li class>
+        <a class="change c4" href="">Requests</a>
+      </li>
+    </ul>
+    <ul width="auto" class="insider2">
+      <li>
+        <div class="log_out">
+          <button type="button" class="butt" onclick="window.location.href = 'http://localhost:5500/sign_up.html';">Log
+            Out</button>
+        </div>
+      </li>
+    </ul>
+    <div id="magic" class="magic">
+      <div class="magic1">
+        <video id="myVideo" autoplay muted loop width="420px" height="320px">
+          <source src="https://cdn-icons-mp4.flaticon.com/512/7211/7211809.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
-
     <!-- starting of my code ******************************************************-->
+    <p class="floorname">Floors</p>
     <div class="floors">
-        <button class="buttonfloor">
-            Lower Ground
-        </button>
-        <button class="buttonfloor">
-            Upper Ground
-        </button>
-        <button class="buttonfloor">
-            First Floor
-        </button>
-        <button class="buttonfloor">
-            Second Floor
-        </button>
+      <button id="" onclick="Lower()" class="buttonfloor">
+        Lower Ground
+      </button>
+      <button id="" onclick="Lower2()" class="buttonfloor">
+        Upper Ground
+      </button>
+      <button id="" onclick="Lower3()" class="buttonfloor">
+        First Floor
+      </button>
+      <button id="" onclick="Lower4()" class="buttonfloor">
+        Second Floor
+      </button>
     </div>
-    <div class="floor_div f1">
-        <div class="name">
-            <p class="lower">Lower</p>
-            <p class="ground1">Ground</p>
+    <div id="magic2" class="floor_div f1">
+      <div class="name">
+        <p class="first_title">Lower</p>
+        <p class="second_title">Ground</p>
+      </div>
+      <div class="datediv">
+        <p class="Date">Date</p>
+        <input id="date" type="date" name="Date">
+      </div>
+      <div class="timeform">
+        <div class="timing">
+          <label class="from">From :</label>
+          <input class="time_from" type="time">
+          <label class="to">To :</label>
+          <input class="time_to" type="time">
         </div>
-        <div class="datediv">
-            <p class="Date">Date</p>
-            <input id="date" type="date" name="Date">
-        </div>
-        <div class="timeform">
-            <div class="timing">
-                <label class="from">From :</label>
-                <input class="time_from" type="time">
-                <label class="to">To :</label>
-                <input class="time_to" type="time">
-            </div>
-        </div>
-        <div class="div_classroom_purpose">
-            <textarea id="purpose">Purpose...</textarea>
-            <select class="lgclassrooms" name="Classrooms">
-                <option disabled selected>Classrooms</option>
-                <option value="c002">C002 - 80 Seater (35benches)</option>
-                <option value="c003">C003 - 120 Seater (32benches)</option>
-                <option value="c004">C004 - 240 Seater</option>
-            </select>
-        </div>
-        <button class="request">Request</button>
+      </div>
+        <textarea id="purpose" placeholder="Purpose..."></textarea>
+        <select class="classrooms_option" name="Classrooms">
+          <option disabled selected>Classrooms</option>
+          <option value="C002">C002 - 80 Seater (35 benches)</option>
+          <option value="C003">C003 - 120 Seater (32 benches)</option>
+          <option value="C004">C004 - 240 Seater</option>
+        </select>
+      <button class="request">Request </button>
 
     </div>
-    <div class="floor_div f2">
-
+    <div id="magic3" class="floor_div f2">
+      <div class="name">
+        <p class="first_title">Upper</p>
+        <p class="second_title">Ground</p>
+      </div>
+      <div class="datediv">
+        <p class="Date">Date</p>
+        <input id="date" type="date" name="Date">
+      </div>
+      <div class="timeform">
+        <div class="timing">
+          <label class="from">From :</label>
+          <input class="time_from" type="time">
+          <label class="to">To :</label>
+          <input class="time_to" type="time">
+        </div>
+      </div>
+        <textarea id="purpose" placeholder="Purpose..."></textarea>
+        <select class="classrooms_option" name="Classrooms">
+          <option disabled selected>Classrooms</option>
+          <option value="C101">C102 - 80 Seater (20 benches)</option>
+          <option value="C102">C103 - 80 Seater (20 benches)</option>
+          <option value="C104">C104 - 80 Seater (20 benches)</option>
+          <option value="L105">L105 - Hardware Lab (10 Setup)</option>
+          <option value="L106">L106 - Computer Lab (40 Systems)</option>
+          <option value="L107">L107 - Computer Lab (40 Sysytems)</option>
+        </select>
+      <button class="request">Request </button>
     </div>
-    <div class="floor_div f3">
-
+    <div id="magic4" class="floor_div f3">
+      <div class="name">
+        <p class="first_title">First</p>
+        <p class="second_title">Floor</p>
+      </div>
+      <div class="datediv">
+        <p class="Date">Date</p>
+        <input id="date" type="date" name="Date">
+      </div>
+      <div class="timeform">
+        <div class="timing">
+          <label class="from">From :</label>
+          <input class="time_from" type="time">
+          <label class="to">To :</label>
+          <input class="time_to" type="time">
+        </div>
+      </div>
+        <textarea id="purpose" placeholder="Purpose..."></textarea>
+        <select class="classrooms_option" name="Classrooms">
+          <option disabled selected>Classrooms</option>
+          <option value="C202">C202 - 80 Seater (20 benches)</option>
+          <option value="C203">C203 - 80 Seater (24 benches)</option>
+          <option value="C204">C204 - 80 Seater (20 benches)</option>
+          <option value="C205">C205 - 80 Seater (24 benches)</option>
+          <option value="L207">L207 - Computer Lab (36 Systems)</option>
+        </select>
+      <button class="request">Request </button>
     </div>
-    <div class="floor_div f4">
-
+    <div id="magic5" class="floor_div f4">
+      <div class="name">
+        <p class="first_title">Second</p>
+        <p class="second_title">Floor</p>
+      </div>
+      <div class="datediv">
+        <p class="Date">Date</p>
+        <input id="date" type="date" name="Date">
+      </div>
+      <div class="timeform">
+        <div class="timing">
+          <label class="from">From :</label>
+          <input class="time_from" type="time">
+          <label class="to">To :</label>
+          <input class="time_to" type="time">
+        </div>
+      </div>
+        <textarea id="purpose" placeholder="Purpose..."></textarea>
+          <select class="classrooms_option" name="Classrooms">
+            <option disabled selected>Classrooms</option>
+            <option value="C302">C302 - 80 Seater (20benches)</option>
+            <option value="C303">C303 - 80 Seater (20benches)</option>
+            <option value="C304">C304 - 80 Seater (20benches)</option>
+            <option value="C305">C305 - 80 Seater (20benches)</option>
+      <button class="request">Request </button>
     </div>
+    <script>
+      function Lower() {
+        document.getElementById('magic2').style.zIndex = 1;
+        document.getElementById('magic').style.zIndex = -1;
+        document.getElementById('magic3').style.zIndex = -1;
+        document.getElementById('magic4').style.zIndex = -1;
+        document.getElementById('magic5').style.zIndex = -1;
+        document.getElementById('magic2').style.opacity = "1";
+        document.getElementById('magic').style.opacity = "0";
+        document.getElementById('magic3').style.opacity = "0";
+        document.getElementById('magic4').style.opacity = "0";
+        document.getElementById('magic5').style.opacity = "0";
+      }
+      function Lower2() {
+        document.getElementById('magic2').style.zIndex = -1;
+        document.getElementById('magic').style.zIndex = -1;
+        document.getElementById('magic3').style.zIndex = 1;
+        document.getElementById('magic4').style.zIndex = -1;
+        document.getElementById('magic5').style.zIndex = -1;
+        document.getElementById('magic2').style.opacity = "0";
+        document.getElementById('magic').style.opacity = "0";
+        document.getElementById('magic3').style.opacity = "1";
+        document.getElementById('magic4').style.opacity = "0";
+        document.getElementById('magic5').style.opacity = "0";
+      }
+      function Lower3() {
+        document.getElementById('magic2').style.zIndex = -1;
+        document.getElementById('magic').style.zIndex = -1;
+        document.getElementById('magic3').style.zIndex = -1;
+        document.getElementById('magic4').style.zIndex = 1;
+        document.getElementById('magic5').style.zIndex = -1;
+        document.getElementById('magic2').style.opacity = "0";
+        document.getElementById('magic').style.opacity = "0";
+        document.getElementById('magic3').style.opacity = "0";
+        document.getElementById('magic4').style.opacity = "1";
+        document.getElementById('magic5').style.opacity = "0";
+      }
+      function Lower4() {
+        document.getElementById('magic2').style.zIndex = -1;
+        document.getElementById('magic').style.zIndex = -1;
+        document.getElementById('magic3').style.zIndex = -1;
+        document.getElementById('magic4').style.zIndex = -1;
+        document.getElementById('magic5').style.zIndex = 1;
+        document.getElementById('magic2').style.opacity = "0";
+        document.getElementById('magic').style.opacity = "0";
+        document.getElementById('magic3').style.opacity = "0";
+        document.getElementById('magic4').style.opacity = "0";
+        document.getElementById('magic5').style.opacity = "1";
+      }
+    </script>
 </body>
 
 </html>
