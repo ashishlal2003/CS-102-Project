@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        *{
+    margin:0px;
+    padding:0px;
+}
+.body{
+    background-color:rgb(225, 245, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:600px;
+}
+.card{
+    background-color:rgb(61, 135, 161);
+    height:65%;
+    width:55%;
+    min-height:400px;
+    display:flex;
+    flex-direction: row;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow:rgba(0,0,0,0.15) 0px 5px 15px 9px;
+}
+.left_card{
+    height:100%;
+    width:45%;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(17, 93, 198);
+    /* border-top-left-radius: 8px; */
+}
+.sign_log img{
+    height:90px;
+}
+.sign_log{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.right_card{
+    height: 100%;
+    width:55%;
+    /* border-bottom-right-radius: 8px; */
+    border-top-right-radius: 20px;
+    background-color:white;
+    display:grid;
+    grid-template-rows: 10% 20% 7% 40% 15% 5%;
+}
+.sign_content form{
+    height:80%;
+    display:grid;
+    padding-top:3px;
+    grid-template-rows:40% 33% 33%;
+    justify-content: center;
+    align-items: center;
+}
+.acc{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.id{
+    height:20px;
+    width:190px;
+    border-radius:4px;
+    padding-left:10px;
+    border-style:hidden;
+    background-color:rgb(219, 219, 219);
+    color:rgb(0, 0, 0);
+    box-shadow: 2px 2px 2px rgb(50, 47, 47);
+}
+.signup_button{
+    height: 23px;
+    width:110px;
+    border-radius: 5px;
+    border-style:hidden;
+    background-color: rgb(17, 93, 198);
+    margin-left:45px;
+    margin-top:33px;
+    font-style:bolder;
+    color:white;
+}
+
+.signup_button:hover{
+    background-color: rgb(2, 2, 49);
+}
+.acc a{
+    text-decoration: none;
+    color:rgb(17, 93, 198);
+}
+
+    </style>
+</head>
+<body class="body">
+    <div class="card">
+        <div class="left_card">
+        </div>
+        <div class="right_card">
+            <div></div>
+            <div class="sign_log">
+                <img src="https://cdn-icons-png.flaticon.com/128/72/72648.png">
+            </div>
+            <div class="text">
+            </div>
+            <div class="sign_content">
+                <form>
+                    <input class="id" name="email" type="text" placeholder="Email">
+                    
+                    <input class="id" name="passw" type="password" placeholder="Password">
+
+                    <input class="signup_button" type="submit" value="Register">
+                </form>
+            </div>
+            <div class="acc">
+                <pre>Don't have an account? <a href="#">Sign In</a></pre>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
