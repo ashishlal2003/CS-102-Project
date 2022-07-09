@@ -1,318 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SignUp</title>
-
-</head>
-<style>
+  </head>
+  <style>
     * {
-        margin: 0px;
-        background-color: rgb(218, 246, 255);
-        font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      margin: 0px;
+      background-color: rgb(218, 246, 255);
+      font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
     }
 
     .baap {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .alert{
-        width: 100%;
-        height: 50px;
-        text-align: left;
-        background-color: #EED202;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
+    .alert {
+      width: 100%;
+      height: 10%;
+      text-align: left;
+      background-color: #eed202;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
     }
     .outer {
-        height: 450px;
-        width: 700px;
-        background-color: rgb(0, 107, 255);
-        position: absolute;
-        top: 100px;
-        border-radius: 15px;
-        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      height: 65%;
+      width: 85%;
+      background-color: rgb(0, 107, 255);
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     }
 
     .innerleft {
-        height: 450px;
-        width: 385px;
-        background-color: white;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center;
-    align-items: center; */
-        position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      background-color: white;
     }
 
     .innerright {
-        height: 450px;
-        width: 315px;
-        background-color: rgb(0, 107, 255);
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100px;
-        left: 780px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      background-color: rgb(0, 107, 255);
     }
 
     .adminlogin {
-        height: 50px;
-        width: 100px;
-        background-color: rgb(0, 107, 255);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(0, 107, 255);
     }
 
     .adminlogin_link {
-        height: 30px;
-        width: 180px;
-        color: white;
-        text-decoration: None;
-        border: solid 1px rgb(4, 4, 97);
-        background-color: rgb(4, 4, 97);
-        border-radius: 15px;
-        text-align: center;
-        font-size: 0.9rem;
-        font-weight: 500;
-        position: absolute;
-        top: 304px;
-        left: 50px;
-        padding-top: 10px;
-        padding-left: 10px;
+      color: white;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      text-decoration: None;
+      border: solid 1px rgb(4, 4, 97);
+      background-color: rgb(4, 4, 97);
     }
 
     .adminlogin_link:hover {
-        background-color: rgb(1, 1, 71);
-        border-color: rgb(1, 1, 71);
+      background-color: rgb(1, 1, 71);
+      border-color: rgb(1, 1, 71);
     }
-    .admin_heading_div{
-        height:80px;
-        width:315px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(0, 107, 255);
+    .admin_heading_div {
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: rgb(0, 107, 255);
     }
     .admin_heading {
-        font-weight: 500;
-        font-size: 3rem;
-        background-color: rgb(0, 107, 255);
-        color:rgb(219, 218, 218);
-        position: absolute;
-        top:130px;
-        right:80px;
-    }
-
-    .name_div {
-        height: 50px;
-        width: 385px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 80px;
-    }
-
-    .email_div {
-        height: 50px;
-        width: 385px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 140px;
-    }
-
-    .password_div {
-        height: 50px;
-        width: 385px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 200px;
-    }
-
-    .name {
-        height: 32px;
-        width: 210px;
-        background-color: rgba(225, 224, 224, 0.697);
-        border-radius: 7px;
-        border: solid 1px rgb(187, 187, 187);
-        padding-left: 15px;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-        font-size: 1rem;
-    } 
-
-    .email {
-        height: 32px;
-        width: 210px;
-        background-color: rgba(225, 224, 224, 0.697);
-        border-radius: 7px;
-        border: solid 1px rgb(187, 187, 187);
-        padding-left: 15px;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-        font-size: 1rem;
-    }
-
-    .password {
-        height: 32px;
-        width: 210px;
-        background-color: rgba(225, 224, 224, 0.697);
-        border-radius: 7px;
-        border: solid 1px rgb(187, 187, 187);
-        padding-left: 15px;
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-        font-size: 1rem;
-    }
-
-    .name:focus {
-        border: None;
-        outline: None;
-        border: solid 1px black;
-    }
-
-    .email:focus {
-        border: None;
-        outline: None;
-        border: solid 1px black;
-    }
-
-    .password:focus {
-        border: None;
-        outline: None;
-        border: solid 1px black;
-    }
-
-    .login_div {
-        height: 50px;
-        width: 385px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 300px;
-    }
-
-    .login {
-        height: 35px;
-        width: 180px;
-        background-color: rgb(0, 107, 255);
-        border-radius: 6px;
-        border: solid 1px rgb(0, 107, 255);
-        padding-left: 15px;
-        text-align: center;
-        color: white;
-        font-size: 0.9rem;
-    }
-
-    .signup_div {
-        height: 30px;
-        width: 385px;
-        background-color: white;
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 405px;
-    }
-
-    .signup {
-        height: 30px;
-        width: 240;
-        color: grey;
-        background-color: white;
-        font-size: 0.9rem;
-    }
-
-    .signup_link {
-        background-color: white;
-        padding-left: 5px;
-        text-decoration: None;
-        color: rgb(3, 92, 218);
-        font-weight: 500;
+      font-weight: 400;
+      font-size: 3.5rem;
+      background-color: rgb(0, 107, 255);
+      color: rgb(219, 218, 218);
     }
 
     .head_div {
-        height: 70px;
-        width: 385px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 20px;
+      height: 15%;
+      width: 100%;
+      text-align: center;
+      background-color: white;
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+      font-size: 1.5rem;
+      padding: 1px;
+      font-weight: 500;
+      color: rgb(89, 88, 88);
+    }
+    .mainform {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+    .form {
+      height: 70%;
+      width: 100%;
+    }
+    .form_inside {
+      height: 100%;
+
+      background-color: white;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+    }
+    .name_div {
+      border-radius: 7px;
+      background-color: white;
+    }
+    .name {
+      background-color: rgba(225, 224, 224, 0.697);
+      border-radius: 7px;
+      border: solid 1px rgb(187, 187, 187);
+      padding: 1px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      font-size: 1rem;
+    }
+    .email_div {
+      border-radius: 7px;
+      background-color: white;
+    }
+    .email {
+      background-color: rgba(225, 224, 224, 0.697);
+      border-radius: 7px;
+      border: solid 1px rgb(187, 187, 187);
+      padding: 1px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      font-size: 1rem;
+    }
+    .password_div {
+      border-radius: 7px;
+      background-color: white;
+    }
+    .password {
+      background-color: rgba(225, 224, 224, 0.697);
+      border-radius: 7px;
+      border: solid 1px rgb(187, 187, 187);
+      padding: 1px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      font-size: 1rem;
     }
 
-    .head {
+    .name:focus {
+      border: None;
+      outline: None;
+      border: solid 1px black;
+    }
+
+    .email:focus {
+      border: None;
+      outline: None;
+      border: solid 1px black;
+    }
+
+    .password:focus {
+      border: None;
+      outline: None;
+      border: solid 1px black;
+    }
+    .login_div {
+      height: 15%;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login {
+      height: 90%;
+      width: 70%;
+      background-color: rgb(0, 107, 255);
+      border-radius: 6px;
+      border: solid 1px rgb(0, 107, 255);
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .signup_div {
+      height: 15%;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: grey;
+      font-size: 0.9rem;
+    }
+    .signup_link {
+      background-color: white;
+      padding-left: 5px;
+      text-decoration: None;
+      color: rgb(3, 92, 218);
+      font-weight: 500;
+    }
+    @media (min-width: 768px) {
+      .outer {
+        flex-direction: row;
+        height: 60%;
+        width: 40%;
+      }
+      .innerleft {
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 1rem;
+      }
+      .signup_div {
+        border-bottom-left-radius: 1rem;
+      }
+      .innerright {
+        border-top-right-radius: 1rem;
+      }
+      .admin_heading {
+        font-size: 4.2rem;
+      }
+      .adminlogin_link {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      .head_div {
         font-size: 2rem;
-        background-color: white;
-        font-weight: 500;
-        color: rgb(89, 88, 88)
+      }
+      .signup_div {
+        font-size: medium;
+      }
+      .login_div {
+        padding: 0px;
+      }
+      .name {
+        width: 200px;
+        padding: 2px;
+      }
+      .email {
+        width: 200px;
+        padding: 2px;
+      }
+      .password {
+        width: 200px;
+        padding: 2px;
+      }
     }
-</style>
-<body>
-    <div class="baap" >
-            <% if (warn != ''){ %> 
-            <div class="alert alert-warning" role="alert">
-                Warning! <%= warn %>
+  </style>
+  <body>
+    <div class="baap">
+      <% if (warn != ''){ %>
+      <div class="alert alert-warning" role="alert">
+        Warning! <%= warn %>
+      </div>
+      <% } %>
+      <div class="outer">
+        <div class="innerleft">
+          <div class="head_div">
+            Please Sign-Up
+          </div>
+          <div class="form">
+            <form action="/" class="mainform" method="post">
+              <div class="form_inside">
+                <div class="name_div">
+                  <input
+                    name="name"
+                    class="name"
+                    type="text"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div class="email_div">
+                  <input
+                    name="username"
+                    class="email"
+                    type="text"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="password_div">
+                  <input
+                    name="password"
+                    class="password"
+                    type="password"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <div class="login_div">
+                  <input class="login" type="submit" value="SignUp" />
+                </div>
               </div>
-              <% } %> 
-        <div class="outer">
-            
-            <div class="innerleft">
-                <div class="head_div">
-                    <p class="head">Please Sign-Up</p>
-                </div>
-                <form action="/" method="post">
-                    <div class="name_div">
-                        <input name="name" class="name" type="text" placeholder="Name" required>
-                    </div>
-                    <div class="email_div">
-                        <input name="username" class="email" type="text" placeholder="Email" required>
-                    </div>
-                    <div class="password_div">
-                        <input name="password" class="password" type="password" placeholder="Password" required>
-                    </div>
-                    <div class="login_div">
-                        <input class="login" type="submit" value="SignUp">
-                    </div>
-                </form>
-                <div class="signup_div">
-                    <p class="signup">Already have an account?<a class="signup_link" href="login">Login</a></p>
-                </div>
-                </div>
-            </div>
-            <div class="innerright">
-                <div class="adminlogin">
-                    <a class="adminlogin_link" href="admin_login">Admin login</a>
-                </div>
-                <div class="admin_heading_div">
-                    <p class="admin_heading">Are you an Admin?</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+            </form>
+          </div>
 
+          <div class="signup_div">
+            Already have an account?
+            <a class="signup_link" href="login">Login</a>
+          </div>
+        </div>
+
+        <div class="innerright">
+          <div class="admin_heading_div">
+            <p class="admin_heading">Admin?</p>
+          </div>
+          <div class="adminlogin">
+            <a class="adminlogin_link" href="admin_login">Admin login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
