@@ -83,7 +83,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-mongoose.connect("mongodb+srv://ashishlaldb:ashishlaldb@roombooking.baadhjk.mongodb.net/userDB");
+mongoose.connect("mongodb://localhost:27017/userDB");
 
 function isAdmin(req, res, next){
     if(req.user && req.user.role === 'admin'){
