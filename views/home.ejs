@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Merriweather:wght@300&family=Satisfy&family=Source+Sans+Pro&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    background-color: white;
+}
+.header{
+    display:grid;
+    grid-template-columns: 2% 20% 38% 30% 10%;
+}
+.img img{
+    width:190px;
+}
+.options ul li{
+    display:inline;
+    position:relative;
+    font-weight: bolder;
+    font-size: 17px;
+    margin:15px;
+}
+.options{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.logout{
+    padding-top: 21px;
+    
+}
+.logout a{
+    text-decoration:none;
+    color:white;
+    height:20px;
+    padding:10px;
+    background-color: blue;
+    width:100px;
+    font-weight: bolder;
+    border-radius:20px;
+}
+.logout a:hover{
+    background-color: darkblue;
+}
+.options ul li:hover{
+    color:blue;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+
+/* ********************card****************** */
+main{
+    height:600px;
+}
+.card{
+    height:470px;
+    width:100%;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    
+}
+.inner_left{
+    background-color: #1ca3a4;
+}
+.inner_right{
+    background-image: radial-gradient(farthest-corner at 50% 70%,#b2c5cb 1%, #1ca3a4 60%);
+}
+.first{
+    background-color: transparent;
+    color:white;
+    font-size:50px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.second {
+    background-color: transparent;
+    color:rgb(2, 2, 146);
+    font-size:85px;
+    margin-top:-15px;
+    font-weight:bolder;
+    text-decoration: none;
+    font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.inner_left pre{
+    background-color: transparent;
+    color:white;
+    font-size:18px;
+    margin-top: 5px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.inner_left{
+    padding-top:90px;
+    padding-left: 24px;
+}
+
+.book input{
+    margin-top: 298px;
+    background-color: rgb(2, 2, 146);
+    border:none;
+    color: white;
+    font-weight: bolder;
+    font-size:22px;
+    height: 45px;
+    width: 150px;
+    border-radius:5px;
+    box-shadow: 2px 3px black;
+    cursor: pointer;
+  }
+.book a{
+    text-decoration: none;
+}
+.book{
+    margin-left:240px;
+}
+.book input:hover{
+    background-color:rgb(9, 9, 91);
+}
+
+
+/* ********************footer************/
+.footer{
+    background-color: black;
+    height:200px;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div>
+        </div>
+        <div class="img">
+            <img src="https://iiitdwd.ac.in/img/logon.png">
+        </div>
+        <div>
+        </div>
+        <div class="options">
+            <ul class="opt">
+                <li>
+                    <a href="home">Home</a> 
+                </li>
+                <li>
+                    <a href="book">Book</a> 
+                </li>
+                <li>
+                    <a href="requests">Request</a> 
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="logout">
+                <a href="/login">Sign Out</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="card">
+            <div class="inner_left">
+                <h1 class="first">Booking Site For</h1>
+                <h1 class="second">IIIT Dharwad</h>
+            <pre>
+This is your hub for scheduling quizes, guest lectures 
+and many other activities, eliminating the hassle of back-and-forth 
+emails so you can back to work
+            </pre>
+            </div>
+            <div class="inner_right">
+                <span class="book" >
+                    <a href="book"><input type="submit" value="Room Book"></a>
+                </span>
+            </div>
+       </div>
+    </main>
+    <footer class="footer">
+    
+    </footer>
+    
+</body>
+</html>
