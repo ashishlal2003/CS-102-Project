@@ -1,177 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lets do it!</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Kanit:wght@500&family=Merriweather:wght@300&family=Satisfy&family=Source+Sans+Pro&display=swap');
-*{
-    padding:0px;
-    margin:0px;
-    background-color: white;
-}
-.header{
-    display:grid;
-    grid-template-columns: 2% 20% 38% 30% 10%;
-}
-.img img{
-    width:190px;
-}
-.options ul li{
-    display:inline;
-    position:relative;
-    font-weight: bolder;
-    font-size: 17px;
-    margin:15px;
-}
-.options{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.logout{
-    padding-top: 21px;
-    
-}
-.logout a{
-    text-decoration:none;
-    color:white;
-    height:20px;
-    padding:10px;
-    background-color: blue;
-    width:100px;
-    font-weight: bolder;
-    border-radius:20px;
-}
-.logout a:hover{
-    background-color: darkblue;
-}
-.options ul li:hover{
-    color:blue;
-    cursor: pointer;
-    transform: scale(1.5);
-}
-
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Kanit:wght@500&family=Merriweather:wght@300&family=Satisfy&family=Source+Sans+Pro&display=swap');
+      * {
+        padding: 0px;
+        margin: 0px;
+        background-color: white;
+      }
+      .main {
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .img {
+        width: 80px;
+      }
+      .img img {
+        width: 100%;
+      }
+      .options ul li {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        font-weight: bolder;
+        font-size: 15px;
+        margin: 2px;
+      }
+      .options {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      .logout {
+        padding-top: 10px;
+      }
+      .logout a {
+        text-decoration: none;
+        color: white;
+        height: 8px;
+        padding: 5px;
+        background-color: blue;
+        width: 10px;
+        font-weight: bolder;
+        border-radius: 20px;
+      }
+      .logout a:hover {
+        background-color: darkblue;
+      }
+      .options ul li:hover {
+        color: blue;
+        cursor: pointer;
+        transform: scale(1.5);
+      }
+      @media (min-width: 768px) {
+        .header {
+          margin: 0px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .img {
+          width: 15%;
+        }
+        .opt {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          flex-direction: row;
+          padding-left: 600px;
+        }
+        .options ul li {
+          font-size: 25px;
+          margin: 10px;
+        }
+        .logout a {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+        }
+      }
     </style>
     <style>
-        main{
-            padding: 25px 15px;
-            background-color: #1ca3a4;
-            
-        }
+      main {
+        padding: 25px 15px;
+        background-color: #1ca3a4;
+      }
 
-        .title{
-            background-color: transparent;
-            color: white;
-            font-weight: 600;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 35px;
-            padding-left:60px
-        }
-        table{
-            margin: 30px 0;
-            width: 90%;
-            text-align: center;
-            margin-inline: auto;
-        }
-        table thead th
-        {
-            background-color: #2d9b9b;
-            color: white;
-            padding: 10px 15px;
-            font-family: 'Courier New', Courier, monospace;
-        }
+      .title {
+        background-color: transparent;
+        color: white;
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        text-align: center;
+      }
+      table {
+        margin: 30px 0;
+        width: 90%;
+        text-align: center;
+        margin-inline: auto;
+      }
+      table thead th {
+        background-color: #2d9b9b;
+        color: white;
+        padding: 10px 15px;
+        font-family: 'Courier New', Courier, monospace;
+      }
 
-        table tbody td{
-            background-color: #b5dada;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            padding: 10px 7px;
-        }
-
-        .button {
-            cursor: pointer;
-            padding: 8px 12px;
-            background-color: rgba(204, 204, 60, 0.731);
-            color: white;
-            border: 0;
-            border-radius: 20px;
-        }
-        .button:active{
-            transform: scale(0.97);
-        }
-        .button:hover{
-            transform: scale(1.03);
-        }
-         .approve{
-            background-color: rgb(131, 164, 82);
-        }
-          .reject{
-            background-color: rgb(174, 67, 67);
-        }
+      table tbody td {
+        background-color: #b5dada;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 10px 7px;
+      }
+      .button {
+        cursor: pointer;
+        padding: 8px 12px;
+        background-color: rgba(204, 204, 60, 0.731);
+        color: white;
+        border: 0;
+        border-radius: 20px;
+      }
+      .button:active {
+        transform: scale(0.97);
+      }
+      .button:hover {
+        transform: scale(1.03);
+      }
+      .approve {
+        background-color: rgb(131, 164, 82);
+      }
+      .reject {
+        background-color: rgb(174, 67, 67);
+      }
     </style>
-</head>
-<body>
-
-    <header class="header">
-        <div>
-        </div>
+  </head>
+  <body>
+    <div class="main">
+      <header class="header">
         <div class="img">
-            <img src="./logo.png" alt="">
+          <img src="./logo.png" alt="" />
         </div>
-        <div>
-        </div>
+
         <div class="options">
-            <ul class="opt">
-                <li>
-                    <a href="home">Home</a> 
-                </li>
-                <li>
-                    <a href="book">Book</a> 
-                </li>
-                <li>
-                    <a href="requests">Request</a> 
-                </li>
-            </ul>
+          <ul class="opt">
+            <li>
+              <a href="home">Home</a>
+            </li>
+            <li>
+              <a href="book">Book</a>
+            </li>
+            <li>
+              <a href="requests">Request</a>
+            </li>
+          </ul>
         </div>
         <div>
-            <div class="logout">
-                <a href="/login">Sign Out</a>
-            </div>
+          <div class="logout">
+            <a href="/login">Sign Out</a>
+          </div>
         </div>
-    </header>
-    <main>
+      </header>
+      <main>
         <div class="title">
-        Pending Requests
-    </div>
-    <table border="0" cellspacing="0" cellpadding="0">
-        <thead>
+          Pending Requests
+        </div>
+        <table border="0" cellspacing="0" cellpadding="0">
+          <thead>
             <th>Name</th>
             <th>Email</th>
             <th>Room</th>
             <th>Start Time</th>
             <th>End Time</th>
             <th>Status</th>
-        </thead>
-        <tbody>
-            
-            <% for (var i =0; i < requests.length;  i++ ) { %>
-                <tr>
-                    <td><%= requests[i].student.name %></td>
-                <td><%= requests[i].student.username %></td>
-                <td><%= requests[i].room %></td>
-                <td><%= requests[i].start %></td>
-                <td><%= requests[i].end %></td>
-                <td><div class="button"><%= requests[i].status %></div></td>
-                </tr>
-                <% } %>
-                
-            
-        </tbody>
-    </table>
-    </main>
-    
-    
-</body>
+          </thead>
+          <tbody>
+            <% for (var i =0; i < requests.length; i++ ) { %>
+            <tr>
+              <td><%= requests[i].student.name %></td>
+              <td><%= requests[i].student.username %></td>
+              <td><%= requests[i].room %></td>
+              <td><%= requests[i].start %></td>
+              <td><%= requests[i].end %></td>
+              <td><div class="button"><%= requests[i].status %></div></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </main>
+    </div>
+  </body>
 </html>
