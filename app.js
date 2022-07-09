@@ -242,6 +242,28 @@ app.post('/admin_login', function (req, res) {
   })
 })
 
+function compareTime(t1,t2){
+    let t1Hours = t1.split(':')[0];
+    let t2Hours = t2.split(':')[0];
+    let t1Min = t1.split(':')[1];
+    let t2Min = t2.split(':')[1];
+    if(t1Hours < t2Hours){
+        return -1;
+    }
+    else if(t1Hours > t2Hours){
+        return 1;
+    }
+    else if(t1Min < t2Min){
+        return -1;
+    }
+    else if(t1Min > t2Min){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
 app.post('/book', isStudent, function (req, res) {
   const booking = new Booking({
     student: req.user._id,
@@ -252,24 +274,24 @@ app.post('/book', isStudent, function (req, res) {
     purpose: req.body.purpose,
   })
 
-  Booking.findOne(
-    {
-      date: req.body.date,
-      room: req.body.Classrooms,
-      start: { $lte: req.body.start },
-      end: { $gte: req.body.end },
-    },
-    function (err, booking) {
-      if (err) console.log(err)
-      if (booking) {
-        console.log('This solt is booked.')
-        res.redirect('/book')
-      } else {
-        booking.save()
-        res.redirect('/requests')
-      }
-    },
-  )
+  const sameDateBookings = await Booking.find({date: req.body.date, status: 'Approved', room: req.body.Classrooms})
+
+    if(sameDateBookings.length>0){
+        let flag = 0;
+        sameDateBookings.forEach(booking => {
+            if(compareTime(req.body.start,booking.start)>=0 && compareTime(req.body.start,booking.end)===-1){
+                flag = 1
+            }
+        });
+        if(flag === 1){
+            return res.render("book",{
+                alert: true,
+                message: "Someone has already booked at this time."
+            });
+        }else{}
+    }
+    await booking.save();
+    return res.redirect("/requests");
 })
 
 app.post('/requests', isStudent, function (req, res) {})
