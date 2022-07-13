@@ -83,7 +83,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-mongoose.connect("mongodb+srv://ashishlaldb:ashishlaldb@roombooking.baadhjk.mongodb.net/userDB");
+mongoose.connect("mongodb://localhost:27017/userDB");
 
 function isAdmin(req, res, next){
     if(req.user && req.user.role === 'admin'){
@@ -295,7 +295,17 @@ function compareTime(t1,t2){
     }
 }
 
-app.post("/book",isStudent,async function(req,res){
+app.post("/book",isStudent,async function(req,res,next){
+
+    if(
+        !req.body.date || !req.body.Classrooms || !req.body.start || !req.body.end || !req.body.purpose
+    ){
+        return res.render("book",{
+         alert: true,
+         message: "Please fill out the form completely!"
+     })
+     }
+
     const booking = new Booking({
         student: req.user._id,
         date: req.body.date,
@@ -304,6 +314,15 @@ app.post("/book",isStudent,async function(req,res){
         end: req.body.end,
         purpose: req.body.purpose
     });
+
+   
+
+    if(new Date(req.body.date).getTime() < new Date().getTime()){
+        return res.render("book",{
+            alert: true,
+            message: "Invalid Date!"
+        })
+    }
 
     const sameDateBookings = await Booking.find({date: req.body.date, status: 'Approved', room: req.body.Classrooms})
 
@@ -321,8 +340,10 @@ app.post("/book",isStudent,async function(req,res){
             });
         }else{}
     }
-    await booking.save();
-    return res.redirect("/requests");
+    
+     await booking.save();
+        return res.redirect("/requests");
+    
 });
 
 app.post("/requests",isStudent,function(req,res){

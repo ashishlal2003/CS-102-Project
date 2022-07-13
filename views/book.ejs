@@ -34,7 +34,6 @@
 *{
     padding:0px;
     margin:0px;
-    background-color: white;
 }
 .header{
     display:grid;
@@ -428,8 +427,14 @@
   }
 
   .alert{
-    color:red;
+    color:rgb(65, 17, 17);
     text-align: center;
+    /* z-index: 2; */
+    position: absolute;
+    top: 15%;
+    left: 34.5%;
+    background: transparent;
+    font-size: 2vw;
   }
 </style>
 
@@ -669,6 +674,21 @@
         document.getElementById('magic4').style.opacity = "0";
         document.getElementById('magic5').style.opacity = "1";
       }
+
+      const today = new Date()
+    const year = today.getFullYear()
+    let month = parseInt(today.getMonth()) + 1
+    if(month<10){
+      month = '0' + month
+    }
+    const date = today.getDate()
+
+    const tdate = year + '-' + month + '-' + date
+
+    document.querySelectorAll('input[type="date"]').forEach(e => {
+    e.setAttribute('min', tdate)
+})
+
     </script>
 </body>
 
