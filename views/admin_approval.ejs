@@ -127,7 +127,7 @@
         <div>
         </div>
         <div class="img">
-            <img src="./logo.png" alt="">
+            <a href="https://www.iiitdwd.ac.in"><img src="./logo.png" alt=""></a>
         </div>
         <div>
         </div>
@@ -149,8 +149,9 @@
             <th>Name</th>
             <th>Email</th>
             <th>Room</th>
-            <th>Start Time</th>
-            <th>End Time</th>
+            <th>Date</th>
+            <th>Timings</th>
+            <th>Purpose</th>
             <th>Actions</th>
         </thead>
         <tbody>
@@ -160,8 +161,9 @@
                     <td><%= requests[i].student.name %></td>
                 <td><%= requests[i].student.username %></td>
                 <td><%= requests[i].room %></td>
-                <td><%= requests[i].start %></td>
-                <td><%= requests[i].end %></td>
+                <td><%= requests[i].date %></td>
+                <td><%= requests[i].start %> - <%= requests[i].end %></td>
+                <td><%= requests[i].purpose %></td>
                 <td>
                     
                     <div>
@@ -179,6 +181,40 @@
                 <% } %>
                 
             
+        </tbody>
+    </table>
+
+    <!-- Added requests history below  -->
+
+    <div class="title">
+        Request History
+    </div>
+
+    <table border="0" cellspacing="0" cellpadding="0">
+
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Room</th>
+            <th>Date</th>
+            <th>Timings</th>
+            <th>Purpose</th>
+            <th>Actions</th>
+        </thead>
+
+        <tbody>
+            <% for (var i =0; i < approvedRequests.length;  i++ ) { %>
+                <tr>
+                    <td><%= approvedRequests[i].student.name %></td>
+                <td><%= approvedRequests[i].student.username %></td>
+                <td><%= approvedRequests[i].room %></td>
+                <td><%= approvedRequests[i].date %></td>
+                <td><%= approvedRequests[i].start %> - <%= approvedRequests[i].end %></td>
+                <td><%= approvedRequests[i].purpose %></td>
+                <td><%= approvedRequests[i].status %></td>
+                </tr>
+                <% } %>   
+        </tbody>
         </tbody>
     </table>
     </main>
