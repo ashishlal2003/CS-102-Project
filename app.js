@@ -83,7 +83,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-mongoose.connect("mongodb://localhost:27017/userDB");
+mongoose.connect("mongodb+srv://ashishlaldb:ashishlaldb@roombooking.baadhjk.mongodb.net/userDB");
 
 function isAdmin(req, res, next){
     if(req.user && req.user.role === 'admin'){
@@ -330,6 +330,11 @@ app.post("/requests",isStudent,function(req,res){
    
 })
 
-app.listen(3000,function(){
-    console.log("Server is running on port 3000.");
+let port = process.env.PORT;
+if(port == null || port == ""){
+    port = 3000;
+}
+
+app.listen(port,function(){
+    console.log("Server is running.");
 });
