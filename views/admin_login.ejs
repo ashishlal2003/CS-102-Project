@@ -1,279 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin LogIn</title>
-  </head>
-  <style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>admin login</title>
+
+</head>
+<style>
     * {
-      margin: 0px;
-      background-color: rgb(218, 246, 255);
-      font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol';
+        margin: 0;
+        background-color: rgb(218, 246, 255);
+        font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
 
     .baap {
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .outer {
-      height: 65%;
-      width: 85%;
-      background-color: rgb(0, 107, 255);
-      border-radius: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        height: 75%;
+        width: 57%;
+        background-color: white;
+        position: absolute;
+        top: 17%;
+        border-radius: 1.5vw;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .innerleft {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-      background-color: white;
+        height: 100%;
+        width: 55%;
+        background-color: white;
+        border-top-left-radius: 1.5vw;
+        border-bottom-left-radius: 1.5vw;
+        display: flex;
+        flex-direction: column;
     }
 
     .innerright {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-bottom-left-radius: 1rem;
-      border-bottom-right-radius: 1rem;
-      background-color: rgb(0, 107, 255);
+        height: 100%;
+        width: 45%;
+        background-color: rgb(0, 107, 255);
+        border-top-right-radius: 1.5vw;
+        border-bottom-right-radius: 1.5vw;
+        display: flex;
+        flex-direction: column;
     }
 
     .adminlogin {
-      height: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(0, 107, 255);
+        height: 10%;
+        width: 100%;
+        background-color: rgb(0, 107, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top:66.7%;
     }
 
     .adminlogin_link {
-      color: white;
-      border-radius: 1rem;
-      padding: 0.5rem;
-      font-size: 1rem;
-      text-decoration: None;
-      border: solid 1px rgb(4, 4, 97);
-      background-color: rgb(4, 4, 97);
+        height: 67%;
+        width: 45%;
+        color: white;
+        text-decoration: None;
+        border: solid 0.1vw rgb(4, 4, 97);
+        background-color: rgb(4, 4, 97);
+        border-radius: 1.5vw;
+        text-align: center;
+        font-size: 1.15vw;
+        font-weight: 500;
+        padding-top: 1vw;
+        padding-left: 1vw;
     }
 
     .adminlogin_link:hover {
-      background-color: rgb(1, 1, 71);
-      border-color: rgb(1, 1, 71);
+        background-color: rgb(1, 1, 71);
+        border-color: rgb(1, 1, 71);
     }
-    .admin_heading_div {
-      height: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: rgb(0, 107, 255);
+    .admin_heading_div{
+        height:30%;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 107, 255);
+        position: relative;
+        top:20%;
     }
     .admin_heading {
-      font-weight: 400;
-      font-size: 2rem;
-      background-color: rgb(0, 107, 255);
-      color: rgb(219, 218, 218);
+        font-weight: 500;
+        font-size: 4vw;
+        background-color: rgb(0, 107, 255);
+        color:white;
     }
-
-    .head_div {
-      height: 15%;
-      width: 100%;
-      text-align: center;
-      background-color: white;
-      border-top-right-radius: 1rem;
-      border-top-left-radius: 1rem;
-      font-size: 1.5rem;
-      padding: 1px;
-      font-weight: 500;
-      color: rgb(89, 88, 88);
+    .admin_heading2 {
+        font-weight: 500;
+        font-size: 4vw;
+        background-color: rgb(0, 107, 255);
+        color:white;
     }
-    .mainform {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-    }
-    .form {
-      height: 70%;
-      width: 100%;
-    }
-    .form_inside {
-      height: 100%;
-
-      background-color: white;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-direction: column;
-    }
-
     .email_div {
-      border-radius: 7px;
-      background-color: white;
+        height: 9%;
+        width: 55%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 30%;
     }
-    .email {
-      background-color: rgba(225, 224, 224, 0.697);
-      border-radius: 7px;
-      border: solid 1px rgb(187, 187, 187);
-      padding: 1px;
-      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-      font-size: 1rem;
-    }
+
     .password_div {
-      border-radius: 7px;
-      background-color: white;
+        /* height: 50px;
+        width: 385px; */
+        height: 9%;
+        width: 55%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 45.5%;
     }
+
+    .email {
+        height: 80%;
+        width: 55%;
+        background-color: rgba(225, 224, 224, 0.697);
+        border-radius: 0.5vw;
+        border: solid 0.1vw rgb(187, 187, 187);
+        padding-left: 1.5vw;
+        box-shadow: rgba(0, 0, 0, 0.15) 0 0.5vw 1.5vw 0;
+        font-size: 1.3vw;
+    }
+
     .password {
-      background-color: rgba(225, 224, 224, 0.697);
-      border-radius: 7px;
-      border: solid 1px rgb(187, 187, 187);
-      padding: 1px;
-      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-      font-size: 1rem;
+        /* height: 32px;
+        width: 210px; */
+        height: 80%;
+        width: 55%;
+        background-color: rgba(225, 224, 224, 0.697);
+        border-radius: 0.5vw;
+        border: solid 0.1vw rgb(187, 187, 187);
+        padding-left: 1.5vw;
+        box-shadow: rgba(0, 0, 0, 0.15) 0 0.5vw 1.5vw 0;
+        font-size: 1.3vw;
     }
 
     .email:focus {
-      border: None;
-      outline: None;
-      border: solid 1px black;
+        border: None;
+        outline: None;
+        border: solid 0.1vw black;
     }
 
     .password:focus {
-      border: None;
-      outline: None;
-      border: solid 1px black;
+        border: None;
+        outline: None;
+        border: solid 0.1vw black;
     }
+
     .login_div {
-      height: 15%;
-      width: 100%;
-      background-color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        height: 10%;
+        width: 55%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 67%;
     }
 
     .login {
-      height: 90%;
-      width: 70%;
-      background-color: rgb(0, 107, 255);
-      border-radius: 6px;
-      border: solid 1px rgb(0, 107, 255);
-      text-align: center;
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    @media (min-width: 768px) {
-      .outer {
-        flex-direction: row;
-        height: 60%;
+        height: 75%;
         width: 40%;
-      }
-      .innerleft {
-        border-top-right-radius: 0%;
-        border-bottom-left-radius: 1rem;
-      }
-      .signup_div {
-        border-bottom-left-radius: 1rem;
-      }
-      .innerright {
-        border-top-right-radius: 1rem;
-      }
-      .admin_heading {
-        font-size: 3.5rem;
-      }
-      .admin_heading_div {
-        border-top-right-radius: 1rem;
-      }
-      .adminlogin_link {
-        padding: 1rem;
-        font-size: 1rem;
-      }
-      .head_div {
-        margin-top: 50px;
-        font-size: 2rem;
-      }
-
-      .login_div {
-        padding: 0px;
-      }
-
-      .email {
-        width: 200px;
-        padding: 2px;
-      }
-      .password {
-        width: 200px;
-        padding: 2px;
-      }
+        background-color: rgb(0, 107, 255);
+        border-radius: 0.6vw;
+        border: solid 0.1vw rgb(0, 107, 255);
+        padding-left: 1.5vw;
+        text-align: center;
+        color: white;
+        font-size: 1.2vw;
     }
-  </style>
-  <body>
-    <div class="baap">
-      <div class="outer">
-        <div class="innerleft">
-          <div class="head_div">
-            Welcome Admin!
-          </div>
-          <div class="form">
-            <form action="/admin_login" class="mainform" method="post">
-              <div class="form_inside">
-                <div class="email_div">
-                  <input
-                    name="username"
-                    class="email"
-                    type="text"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <div class="password_div">
-                  <input
-                    name="password"
-                    class="password"
-                    type="password"
-                    placeholder="Password"
-                    required
-                  />
-                </div>
 
-                <div class="login_div">
-                  <input class="login" type="submit" value="Login" />
+    .signup_div {
+        height: 30px;
+        width: 385px;
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 405px;
+    }
+
+    .signup {
+        height: 30px;
+        width: 240px;
+        color: grey;
+        background-color: white;
+        font-size: 0.9rem;
+    }
+
+    .signup_link {
+        background-color: white;
+        padding-left: 5px;
+        text-decoration: None;
+        color: rgb(3, 92, 218);
+        font-weight: 500;
+    }
+
+    .head_div {
+        height: 11%;
+        width: 55%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 6%;
+    }
+
+    .head {
+        font-size: 2.7vw;
+        background-color: white;
+        font-weight: 500;
+        color: rgb(89, 88, 88)
+    }
+</style>
+<body>
+    <div class="baap">
+        <div class="outer">
+            <div class="innerleft">
+                <div class="head_div">
+                    <p class="head">Welcome Admin!</p>
                 </div>
-              </div>
-            </form>
-          </div>
+                <form action="/admin_login" method="post">
+                    <div class="email_div">
+                        <input name="username" class="email" type="text" placeholder="Email">
+                    </div>
+                    <div class="password_div">
+                        <input name="password" class="password" type="password" placeholder="Password">
+                    </div>
+                    <div class="login_div">
+                        <input class="login" type="submit" value="Login">
+                    </div>
+                </form>
+                <!-- <div class="signup_div">
+                    <p class="signup">Don't have an account?<a class="signup_link" href="/">Sign Up</a></p>
+                </div> -->
+            </div>
+            
+            <div class="innerright">
+                <div class="adminlogin">
+                    <a class="adminlogin_link" href="login">Faculty Login</a>
+                </div>
+                <div class="admin_heading_div">
+                    <p class="admin_heading">Are you a </p>
+                    <p class="admin_heading2">Faculty? </p>
+                </div>
+            </div>
+            </div>
         </div>
-        <div class="innerright">
-          <div class="admin_heading_div">
-            <p class="admin_heading">Are you faculty?</p>
-          </div>
-          <div class="adminlogin">
-            <a class="adminlogin_link" href="login">Faculty login</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+</body>
+
 </html>
