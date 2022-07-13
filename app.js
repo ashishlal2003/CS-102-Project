@@ -149,10 +149,20 @@ app.get("/requests",isStudent,async function(req,res){
 });
 
 app.get("/admin_approval",isAdmin,async function(req,res){
-    const requests = await Booking.find({ status: "Pending"}).populate('student')
-
+    const requests = await Booking.find({ }).populate('student')
+    requests.sort((a,b) => {
+        return new Date(b.date)-new Date(a.date)
+    })
+    const pendingRequests = requests.filter(req => {
+    return req.status == "Pending"
+    })
+    const approvedRequests = requests.filter(req => {
+        return req.status == "Approved"
+        })
+    // console.log(requests);
     res.render('admin_approval', {
-        requests
+        requests: pendingRequests,
+        approvedRequests
     })
 })
 
@@ -171,6 +181,7 @@ app.get('/reject_request/:id', isAdmin, async (req, res, next) => {
     await booking.save()
     res.redirect('/admin_approval')
 })
+
 
 
 app.post("/",function(req,res){
@@ -208,10 +219,14 @@ app.post("/login",function(req,res){
     req.login(user, function(err){
         if(err){
            console.log(err); 
-           res.redirect("login")
+           return res.render("login",{
+            alert: true,
+            message: "Wrong Username/Password"
+        })
         }
         else{
-            passport.authenticate("local")(req,res,function(something){
+            passport.authenticate("local")(req, res, function(something){
+                
                 if(req.user.role === 'admin')
                 {
                    return req.logout(function(err) {
@@ -219,7 +234,8 @@ app.post("/login",function(req,res){
                     res.redirect('/');
                   });
                 }
-                else  {res.redirect("home");}
+                else if (req.user.role === 'student') {res.redirect("home");}
+                
             });
 
         }
