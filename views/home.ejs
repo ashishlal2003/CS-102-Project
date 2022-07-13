@@ -1,254 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="home.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Merriweather:wght@300&family=Satisfy&family=Source+Sans+Pro&display=swap');
-      * {
-        padding: 0px;
-        margin: 0px;
-        background-color: white;
-      }
-      .full {
-        height: 100vh;
-        width: 100%;
-        background-color: white;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .img {
-        width: 80px;
-      }
-      .img img {
-        width: 100%;
-      }
-      .options ul li {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        font-weight: bolder;
-        font-size: 15px;
-        margin: 2px;
-      }
-      .options {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-      }
-      .logout {
-        padding-top: 10px;
-      }
-      .logout a {
-        text-decoration: none;
-        color: white;
-        height: 8px;
-        padding: 5px;
-        background-color: blue;
-        width: 10px;
-        font-weight: bolder;
-        border-radius: 20px;
-      }
-      .logout a:hover {
-        background-color: darkblue;
-      }
-      .options ul li:hover {
-        color: blue;
-        cursor: pointer;
-        transform: scale(1.5);
-      }
-      @media (min-width: 768px) {
-        .header {
-          margin: 0px 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .img {
-          width: 15%;
-        }
-        .opt {
-          display: flex;
-          justify-content: center;
-          align-items: flex-end;
-          flex-direction: row;
-          padding-left: 600px;
-        }
-        .options ul li {
-          font-size: 25px;
-          margin: 10px;
-        }
-        .logout a {
-          font-size: 1.5rem;
-          padding: 0.5rem;
-        }
-      }
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    background-color: white;
+}
+.header{
+    display:grid;
+    grid-template-columns: 2% 20% 38vw 30% 10%;
+    min-width:973px;
+    min-height:50px;
+}
+.img img{
+    width:15vw;
+}
+.options ul li{
+    display:inline;
+    position:relative;
+    font-weight: bolder;
+    font-size: 17px;
+    margin:15px;
+}
+.options ul li a{
+    color:rgb(2, 97, 135);
+}
+.options{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.logout{
+    padding-top: 21px;
+    margin-top: 5px;
+}
+.logout a{
+    text-decoration:none;
+    color:white;
+    height:9%;
+    padding:10%;
+    background-color: blue;
+    width:100px;
+    font-weight: bolder;
+    border-radius:20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.logout a:hover{
+    background-color: darkblue;
+}
+.opt li a{
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+.opt li a:hover{
+    color:rgb(124, 7, 42);
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
-      /* ********************card****************** */
-      main {
-        height: 60px;
-      }
-      .card {
-        height: 80vh;
-        width: 100%;
-        
-      }
-      .inner_left {
-        background-color: #1ca3a4;
-        padding: 20px 0px 0px 10px;
-      }
-      .inner_right {
-        background-image: radial-gradient(
-          farthest-corner at 50% 70%,
-          #b2c5cb 1%,
-          #1ca3a4 60%
-        );
-        height: 40vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .first {
-        background-color: transparent;
-        color: white;
-        font-size: 30px;
-        font-weight: bold;
-        text-decoration: none;
-        font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-          Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-          'Segoe UI Emoji', 'Segoe UI Symbol';
-      }
-      .second {
-        background-color: transparent;
-        color: rgb(2, 2, 146);
-        font-size: 45px;
-        margin-top: -10px;
-        font-weight: bolder;
-        text-decoration: none;
-        font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-          Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-          'Segoe UI Emoji', 'Segoe UI Symbol';
-      }
-      .inner_left pre {
-        background-color: transparent;
-        color: white;
-        font-size: 12px;
-        margin-top: 5px;
-        font-family: 'Baloo Bhai 2', cursive;
-      }
-      
-      .book input {
-        
-        background-color: rgb(2, 2, 146);
-        border: none;
-        color: white;
-        font-weight: bolder;
-        font-size: 22px;
-        height: 45px;
-        width: 150px;
-        border-radius: 5px;
-        box-shadow: 2px 3px black;
-        cursor: pointer;
-      }
-      .book a {
-        text-decoration: none;
-      }
-      
-      .book input:hover {
-        background-color: rgb(9, 9, 91);
-      }
-      @media (min-width: 768px) {
-        .card{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .inner_left{
-          height: 100%;
-          width: 100%;
-          padding-top: 0%;
-          
-        }
-        .inner_right{
-          height: 100%;
-          width: 100%;
-        }
-        .first{
-          font-size: 4rem;
-        }
-        .second{
-          font-size: 5.5rem;
-        }
-        .inner_left pre{
-          font-size: 30px;
-        }
-      }
+/* *******card******* */
+main{
+    height:90vh;
+    width:100vw;
+    position:absolute;
+    display:flex;
+    background-color: #d5eeff;
+    /* filter: blur(5px); */
+    align-items: center;
+}
+.card{
+    height:67vh;
+    width:100vw;
+    background: linear-gradient(111.8deg, rgb(80, 171, 207)40%, rgb(1, 146, 204) 90%);
+    display:grid;
+    padding-left:40px;
+    grid-template-columns: 50% 50%;
+    /* filter: blur(5px); */
+    z-index:1;
+    min-height:300px;
+    z-index:0;
+    position:absolute;
+    min-width:830px;
+    
+}
+.card > *{
+  display: inline-block;
+}
+.inner_left{
+    background-color: transparent;
+    display:grid;
+    position: relative;
+    grid-template-rows: 70% 30%;
+    min-width:550px;
+}
+.inner_right{
+    background-color:transparent;
+    display:grid;
+    justify-content: center;
+    position: relative;
+    align-items:center;
+}
+.text{
+    background-color:transparent;
+    padding-left:20px;
+    padding-top:40px;
+    display:grid;
+    grid-template-rows: repeat(3,1fr);
+}
+.buttons{
+    background-color:transparent;
+    display:grid;
+    position: relative;
+    grid-template-columns:repeat(2,1fr);
+    /* grid-column-gap: -5px; */
+}
+.first{
+    background-color: transparent;
+    color:white;
+    font-size:3.125em;
+    font-weight: bold;
+    /* z-index:10; */
+    position:relative;
+    z-index:10;
+    text-decoration: none;
+    z-index:5;
+    font-family: 'Lato', sans-serif;
+}
+.second {
+    background-color: transparent;
+    color:rgb(2, 2, 146);
+    font-size:85px;
+    margin-top:-15px;
+    font-weight:bolder;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+.third{
+    background-color:transparent;
+    color:white;
+    font-weight:bold;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+}
+.book input{
+    background-color: rgb(254, 254, 254);
+    border:none;
+    color: rgb(3, 90, 134);
+    font-weight:800;
+    font-size:22px;
+    height: 45px;
+    width: 100%;
+    position: relative;
+    border-radius:5px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .book input:hover{
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08)); 
+  
+  }
+.request input{
+    background-color: rgb(25, 25, 190);
+    border:none;
+    color: white;
+    font-weight: bolder;
+    font-size:22px;
+    position: relative;
+    height: 45px;
+    /* opacity:0.5; */
+    width: 100%;
+    border-radius:5px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .request input:hover{
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    opacity: 0.8;
+    transition: all .3s
+  }
+  .book,.request{
+    background-color:transparent;
+    display:flex;
+    /* justify-content: center; */
+    padding-top:15px;
+  }
+  .book{
+    padding-left:15px;
+    position: relative;
+  }
+  .book a{
+    background-color: transparent;
+    position: relative;
+    width:80%;
+  }
+  .request a{
+    background-color: transparent;
+    position: relative;
+    width:80%;
+  }
+  .image{
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image img{
+    position: relative;
+    background-color: transparent;
+    height:50vh;
+  }
 
-      /* ********************footer************/
-      .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: black;
-        height: 10%;
-      }
+
     </style>
-  </head>
-  <body>
-    <div class="full">
-      <header class="header">
-        <div class="img">
-          <img src="https://iiitdwd.ac.in/img/logon.png" />
+</head>
+<body>
+    <header class="header">
+        <div>
         </div>
-        <div class="options">
-          <ul class="opt">
-            <li>
-              <a href="home">Home</a>
-            </li>
-            <li>
-              <a href="book">Book</a>
-            </li>
-            <li>
-              <a href="requests">Request</a>
-            </li>
-          </ul>
+        <div class="img">
+            <a href="https://www.iiitdwd.ac.in"><img src="./logo.png" alt=""></a>
         </div>
         <div>
-          <div class="logout">
-            <a href="/login">Sign Out</a>
-          </div>
         </div>
-      </header>
-      <main>
+        <div class="options">
+            <ul class="opt">
+                <li>
+                    <a href="home">Home</a> 
+                </li>
+                <li>
+                    <a href="book">Book</a> 
+                </li>
+                <li>
+                    <a href="requests">Your Requests</a> 
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="logout">
+                <a href="/login">Sign Out</a>
+            </div>
+        </div>
+    </header>
+    <main>
         <div class="card">
-          <div class="inner_left">
-            <h1 class="first">Booking Site For</h1>
-            <h1 class="second">IIIT Dharwad</h>
-        <pre>
-This is your hub for scheduling quizes, 
-guest lectures and many other activities, 
-thus eliminating the hassle of 
-back-and-forth emails 
-so you can get back to work.
-        </pre>
-        </div>
-        <div class="inner_right">
-            <span class="book" >
-                <a href="book"><input type="submit" value="Room Book"></a>
-            </span>
-        </div>
-        </div>
-      </main>
-      <footer class="footer"></footer>
-    </div>
-  </body>
+            <div class="inner_left">
+                <div class="text">
+                    <div class="first">Room Booking Site For</div>
+                    <div class="second">IIIT Dharwad</div>
+                    <div class="third">
+                        <hr style="height:0.5px;background-color:white">A common platform for scheduling Quizzes, Guest Lectures <br>and many other activities, eliminating the hassle of<br> back-and-forth emails.</div>
+                </div>
+                <div class="buttons">
+                    <div class="book"><a href="book"><input type="submit" value="Room Book"></a></div>
+                    <div class="request" style="position: relative"><a href="request"><input type="submit" value="Your Requests"></a></div>
+                </div>
+                <div></div>
+            </div>
+            <div class="inner_right">
+               <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2017/01/31/20/40/calendar-2027122_1280.png">
+                <!-- <img src="https://cdn.pixabay.com/photo/2016/07/31/20/54/calendar-1559935_1280.png"> -->
+            </div>
+       </div>
+    </main>
+    
+</body>
 </html>
