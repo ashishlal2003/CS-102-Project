@@ -1,4 +1,2 @@
 # CS-105-Project
-A common platform to exchange codes for further implementation.
-
-Yahaan pe sab kuch daal do!
+The final CS-102 Project
