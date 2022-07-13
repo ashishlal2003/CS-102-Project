@@ -1,202 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lets do it!</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Requests</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Kanit:wght@500&family=Merriweather:wght@300&family=Satisfy&family=Source+Sans+Pro&display=swap');
-      * {
-        padding: 0px;
-        margin: 0px;
-        background-color: white;
-      }
-      .main {
-        height: 100vh;
-        width: 100%;
-        background-color: white;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .img {
-        width: 80px;
-      }
-      .img img {
-        width: 100%;
-      }
-      .options ul li {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        font-weight: bolder;
-        font-size: 15px;
-        margin: 2px;
-      }
-      .options {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-      }
-      .logout {
-        padding-top: 10px;
-      }
-      .logout a {
-        text-decoration: none;
-        color: white;
-        height: 8px;
-        padding: 5px;
-        background-color: blue;
-        width: 10px;
-        font-weight: bolder;
-        border-radius: 20px;
-      }
-      .logout a:hover {
-        background-color: darkblue;
-      }
-      .options ul li:hover {
-        color: blue;
-        cursor: pointer;
-        transform: scale(1.5);
-      }
-      @media (min-width: 768px) {
-        .header {
-          margin: 0px 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .img {
-          width: 15%;
-        }
-        .opt {
-          display: flex;
-          justify-content: center;
-          align-items: flex-end;
-          flex-direction: row;
-          padding-left: 600px;
-        }
-        .options ul li {
-          font-size: 25px;
-          margin: 10px;
-        }
-        .logout a {
-          font-size: 1.5rem;
-          padding: 0.5rem;
-        }
-      }
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    background-color: white;
+}
+.header{
+    display:grid;
+    grid-template-columns: 2% 20% 38vw 30% 10%;
+    min-width:973px;
+    min-height:50px;
+}
+.img img{
+    width:15vw;
+}
+.options ul li{
+    display:inline;
+    position:relative;
+    /* font-weight: bolder; */
+    font-size: 17px;
+    margin:15px;
+}
+.options ul li a{
+    color:rgb(2, 97, 135);
+}
+.options{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.logout{
+    padding-top: 21px;
+    margin-top: 5px;
+}
+.logout a{
+    text-decoration:none;
+    color:white;
+    height:9%;
+    padding:10%;
+    background-color: blue;
+    width:100px;
+    /* font-weight: bolder; */
+    border-radius:20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.logout a:hover{
+    background-color: darkblue;
+}
+.opt li a{
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+.opt li a:hover{
+    color:rgb(124, 7, 42);
+    transform: scale(1.1);
+    cursor: pointer;
+}
     </style>
     <style>
-      main {
-        padding: 25px 15px;
-        background-color: #1ca3a4;
-      }
+        main{
+            padding: 25px 15px;
+            margin-top:8px;
+            background: linear-gradient(111.8deg, rgb(0, 104, 155) 19.8%, rgb(0, 173, 239) 92.1%);
+            
+        }
 
-      .title {
-        background-color: transparent;
-        color: white;
-        font-weight: 600;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 20px;
-        text-align: center;
-      }
-      table {
-        margin: 30px 0;
-        width: 90%;
-        text-align: center;
-        margin-inline: auto;
-      }
-      table thead th {
-        background-color: #2d9b9b;
-        color: white;
-        padding: 10px 15px;
-        font-family: 'Courier New', Courier, monospace;
-      }
+        .title{
+            background-color: transparent;
+            color: white;
+            font-weight: 600;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 35px;
+            padding-left:60px
+        }
+        table{
+            margin: 30px 0;
+            width: 90%;
+            text-align: center;
+            margin-inline: auto;
+        }
+        table thead th
+        {
+            background-color:#007cb9;
+            color: white;
+            padding: 10px 15px;
+            font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 400;
+        }
 
-      table tbody td {
-        background-color: #b5dada;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        padding: 10px 7px;
-      }
-      .button {
-        cursor: pointer;
-        padding: 8px 12px;
-        background-color: rgba(204, 204, 60, 0.731);
-        color: white;
-        border: 0;
-        border-radius: 20px;
-      }
-      .button:active {
-        transform: scale(0.97);
-      }
-      .button:hover {
-        transform: scale(1.03);
-      }
-      .approve {
-        background-color: rgb(131, 164, 82);
-      }
-      .reject {
-        background-color: rgb(174, 67, 67);
-      }
+        table tbody td{
+            background-color: #9ec8dd;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px 7px;
+        }
+
+        .buttonA {
+            cursor: pointer;
+            padding: 8px 12px;
+            background-color: rgba(48, 128, 11, 0.731);
+            color: white;
+            border: 0;
+            border-radius: 20px;
+        }
+        .buttonR {
+            cursor: pointer;
+            padding: 8px 12px;
+            background-color: rgba(215, 94, 43, 0.731);
+            color: white;
+            border: 0;
+            border-radius: 20px;
+        }
+        .button:active{
+            transform: scale(0.97);
+        }
+        .button:hover{
+            transform: scale(1.03);
+        }
+         .approve{
+            background-color: rgb(131, 164, 82);
+        }
+          .reject{
+            background-color: rgb(174, 67, 67);
+        }
     </style>
-  </head>
-  <body>
-    <div class="main">
-      <header class="header">
-        <div class="img">
-          <img src="./logo.png" alt="" />
+</head>
+<body>
+
+    <header class="header">
+        <div>
         </div>
-
-        <div class="options">
-          <ul class="opt">
-            <li>
-              <a href="home">Home</a>
-            </li>
-            <li>
-              <a href="book">Book</a>
-            </li>
-            <li>
-              <a href="requests">Request</a>
-            </li>
-          </ul>
+        <div class="img">
+            <a href="https://www.iiitdwd.ac.in"><img src="./logo.png" alt=""></a>
         </div>
         <div>
-          <div class="logout">
-            <a href="/login">Sign Out</a>
-          </div>
         </div>
-      </header>
-      <main>
+        <div class="options">
+            <ul class="opt">
+                <li>
+                    <a href="home">Home</a> 
+                </li>
+                <li>
+                    <a href="book">Book</a> 
+                </li>
+                <li>
+                    <a href="requests">Your Requests</a> 
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="logout">
+                <a href="/login">Sign Out</a>
+            </div>
+        </div>
+    </header>
+    <main>
         <div class="title">
-          Pending Requests
-        </div>
-        <table border="0" cellspacing="0" cellpadding="0">
-          <thead>
+        Your Requests
+    </div>
+    <table border="0" cellspacing="0" cellpadding="0">
+        <thead>
             <th>Name</th>
             <th>Email</th>
             <th>Room</th>
-            <th>Start Time</th>
-            <th>End Time</th>
+            <th>Date</th>
+            <th>Time</th>
             <th>Status</th>
-          </thead>
-          <tbody>
-            <% for (var i =0; i < requests.length; i++ ) { %>
-            <tr>
-              <td><%= requests[i].student.name %></td>
-              <td><%= requests[i].student.username %></td>
-              <td><%= requests[i].room %></td>
-              <td><%= requests[i].start %></td>
-              <td><%= requests[i].end %></td>
-              <td><div class="button"><%= requests[i].status %></div></td>
-            </tr>
-            <% } %>
-          </tbody>
-        </table>
-      </main>
-    </div>
-  </body>
+        </thead>
+        <tbody>
+            
+            <% for (var i =0; i < requests.length;  i++ ) { %>
+                <tr>
+                    <td><%= requests[i].student.name %></td>
+                <td><%= requests[i].student.username %></td>
+                <td><%= requests[i].room %></td>
+                <td><%= requests[i].date %></td>
+                <td><%= requests[i].start %> - <%= requests[i].end %></td>
+                <!-- <td><div class="button"><%= requests[i].status %></div></td> -->
+                <td>
+                    <% if(requests[i].status === "Approved"){ %>
+                        <div class="buttonA"><%= requests[i].status %></div>
+                    <% } else { %>
+                        <div class="buttonR"><%= requests[i].status %></div>
+                    <% } %>
+                </td>
+                </tr>
+                <% } %>
+                
+            
+        </tbody>
+    </table>
+    </main>
+    
+    
+</body>
 </html>
