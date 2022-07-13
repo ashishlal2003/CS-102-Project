@@ -170,7 +170,8 @@
             <th>Email</th>
             <th>Room</th>
             <th>Date</th>
-            <th>Time</th>
+            <th>Timings</th>
+            <th>Purpose</th>
             <th>Status</th>
         </thead>
         <tbody>
@@ -182,6 +183,7 @@
                 <td><%= requests[i].room %></td>
                 <td><%= requests[i].date %></td>
                 <td><%= requests[i].start %> - <%= requests[i].end %></td>
+                <td><%= requests[i].purpose %></td>
                 <!-- <td><div class="button"><%= requests[i].status %></div></td> -->
                 <td>
                     <% if(requests[i].status === "Approved"){ %>
