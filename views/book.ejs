@@ -1,406 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>trybooking</title>
-    <link rel="stylesheet" href="booking.css" />
-  </head>
-  <style>
-    * {
-      text-decoration: none;
-      font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol';
-      margin-top: 5px;
-    }
 
-    body {
-      margin: 0;
-      padding-left: 10px;
-      padding-right: 0px;
-    }
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>Book</title>
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .img {
-      width: 200px;
-    }
-    .img img {
-      width: 100%;
-    }
-    .options ul li {
-      display: flex;
-      flex-direction: row;
-      position: relative;
-      font-weight: bolder;
-      font-size: 25px;
-      margin: 10px;
-    }
-    .opt {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      flex-direction: row;
-      padding-left: 200px;
-    }
-    .logout {
-      padding-top: 10px;
-      font-size: 1.5rem;
-      padding: 0.5rem;
-    }
-    .logout a {
-      text-decoration: none;
-      color: white;
-      height: 8px;
-      padding: 5px;
-      background-color: blue;
-      width: 10px;
-      font-weight: bolder;
-      border-radius: 20px;
-    }
-    .logout a:hover {
-      background-color: darkblue;
-    }
-    .options ul li:hover {
-      color: blue;
-      cursor: pointer;
-      transform: scale(1.5);
-    }
+</head>
+<style>
+  * {
+    text-decoration: none;
+    font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin-top: 4px;
+  }
 
-    .all {
-      margin: 0;
-      top: 25vh;
-      position: absolute;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      flex-direction: column;
-      height: 40vh;
-    }
+  body {
+    margin: 0;
+    /* padding-left: 10px;
+    padding-right: 0px; */
+    
+  }
+.color{
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top:10%;
+    /* background-color:#d5eeff; */
+    background: linear-gradient(111.8deg, rgb(0, 104, 155) 19.8%, rgb(0, 173, 239) 92.1%);
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    background-color: white;
+}
+.header{
+    display:grid;
+    grid-template-columns: 2% 20% 38vw 30% 10%;
+    min-width:973px;
+    min-height:50px;
+}
+.img img{
+    width:15vw;
+}
+.options ul li{
+    display:inline;
+    position:relative;
+    /* font-weight: bolder; */
+    font-size: 17px;
+    margin:15px;
+}
+.options ul li a{
+    color:rgb(2, 97, 135);
+}
+.options{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.logout{
+    padding-top: 21px;
+    
+}
+.logout a{
+    text-decoration:none;
+    color:white;
+    height:9%;
+    padding:10%;
+    background-color: blue;
+    width:100px;
+    /* font-weight: bolder; */
+    border-radius:20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.logout a:hover{
+    background-color: darkblue;
+}
+.opt li a{
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+.opt li a:hover{
+    color:rgb(124, 7, 42);
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
-    .c1,
-    .c2,
-    .c3,
-    .c4 {
-      transition: transform 0.2s;
-    }
+  .all {
+    margin: 0;
+    top: 25vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 40vh;
+  }
 
-    .c1:hover {
-      transform: scale(1.1);
-    }
+  .c1,
+  .c2,
+  .c3,
+  .c4 {
+    transition: transform .2s;
+  }
 
-    .c2:hover {
-      transform: scale(1.1);
-    }
+  .c1:hover {
+    transform: scale(1.1);
+  }
 
-    .c3:hover {
-      transform: scale(1.1);
-    }
+  .c2:hover {
+    transform: scale(1.1);
+  }
 
-    .c4:hover {
-      transform: scale(1.1);
-    }
+  .c3:hover {
+    transform: scale(1.1);
+  }
 
-    .log {
-      transition: transform 0.2s;
-    }
+  .c4:hover {
+    transform: scale(1.1);
+  }
 
-    .log:hover {
-      color: rgb(0, 107, 255);
-      transform: scale(1.1);
-    }
+  .log {
+    transition: transform .2s;
+  }
 
+  .log:hover {
+    color: rgb(0, 107, 255);
+    transform: scale(1.1);
+  }
+
+  .floorname {
+    position: absolute;
+    top: 31%;
+    left: 5.2%;
+    font-weight: 500;
+    font-size: 2.7vw;
+    background-color: transparent;
+    color: white;
+    
+  }
+
+  @media (max-width:550px) {
     .floorname {
       position: absolute;
-      top: 180px;
-      left: 67px;
-      font-weight: 500;
-      font-size: 2rem;
+      left: 32px; 
     }
+  }
 
-    @media (max-width: 550px) {
-      .floorname {
-        position: absolute;
-        left: 32px;
-      }
-    }
+  .floors {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 43%;
+    left: 4%;
+    width: 9.5%;
+    height: 44%;
+    background-color: transparent;
+  }
 
+  @media (max-width:550px) {
     .floors {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
       position: absolute;
-      top: 250px;
-      left: 50px;
+      left: 15px;
     }
+  }
 
-    @media (max-width: 550px) {
-      .floors {
-        position: absolute;
-        left: 15px;
-      }
-    }
+  .buttonfloor {
+    margin-bottom: 20%;
+    height: 20%;
+    width: 100%;
+    background-color:white;
+    border-radius: 25px;
+    /* color:darkblue; */
+    color:black;
+    font-weight: 500;
+    /* border: solid 1.5px darkblue; */
+    border: solid 1.5px black; 
+    transition: 0.1s linear;
+    font-size: 1.1vw;
+  }
 
-    .buttonfloor {
-      margin-bottom: 16px;
-      height: 40px;
-      width: 120px;
-      background-color: white;
-      border-radius: 25px;
-      color: darkblue;
-      font-weight: 500;
-      padding: 6px;
-      border: solid 1.5px darkblue;
-      transition: 0.1s linear;
-      margin-bottom: 25px;
-    }
+  .buttonfloor:hover {
+    transform: scale(1.1);
+    background-color:darkblue;
+    color:white;
+    
+  }
 
-    .buttonfloor:hover {
-      transform: scale(1.1);
-      background-color: darkblue;
-      color: white;
-    }
-
+  .magic {
+    height: 68%;
+    width: 34%;
+    background-color: rgb(160, 206, 229);
+    border: solid 0.2vw;
+    position: absolute;
+    left: 32%;
+    top: 25%;
+    border-radius: 5%;
+    /* box-shadow: 0 0.4vw 0.8vw 0 rgba(255, 255, 255, 0.2), 0 0.6vw 2vw 0 rgba(255, 255, 255, 0.19); */
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+.magic1{
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+  .magic_heading{
+    background: transparent;
+    position:relative;
+    top:50%;
+    color:black;
+    font-size: 4vw;
+  }
+  .magic_heading2{
+    line-height: 110px;
+    background: transparent;
+    color:rgb(4, 4, 148);
+    font-size: 4vw;
+  }
+  @media (max-width:550px) {
     .magic {
-      height: 410px;
-      width: 430px;
-      background-color: white;
-      border: solid 2px;
       position: absolute;
-      left: 400px;
-      top: 160px;
-      border-radius: 25px;
-      opacity: 1;
-      transition: all 0.1s ease-in-out;
-      box-shadow: 20px 20px 20px 20px white, 20px 20px 40px 20px white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
+      left: 170px;
     }
+  }
 
-    @media (max-width: 550px) {
-      .magic {
-        position: absolute;
-        left: 170px;
-      }
-    }
+  .f1,
+  .f2,
+  .f3,
+  .f4 {
+    position: absolute;
+    left: 32%;
+    top: 25%;
+    height: 68%;
+    width: 34%;
+    border: solid 0.2vw;
+    border-radius: 5%;
+    /* box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw white, 0.2vw 0.2vw 0.4vw 0.2vw white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(160, 206, 229);;
+  }
+
+  @media (max-width:550px) {
 
     .f1,
     .f2,
     .f3,
     .f4 {
       position: absolute;
-      left: 400px;
-      top: 160px;
-      height: 410px;
-      width: 430px;
-      border: solid 2px;
-      border-radius: 25px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      left: 170px;
     }
+  }
 
-    @media (max-width: 550px) {
-      .f1,
-      .f2,
-      .f3,
-      .f4 {
-        position: absolute;
-        left: 170px;
-      }
-    }
+  .name {
+    height: 10%;
+    width: 100%;
+    position:absolute;
+    top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+  }
 
-    .name {
-      height: 50px;
-      width: 430px;
-      position: absolute;
-      top: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .first_title {
+    font-size: 2.7vw;
+    font-weight: 500;
+    /* border-color: transparent; */
+    background: transparent;
+  }
 
-    .first_title {
-      font-size: 2rem;
-      font-weight: 500;
-      position: relative;
-      left: -5px;
-    }
+  .second_title {
+    color: rgb(1, 66, 156);
+    font-size: 2.7vw;
+    font-weight: 500;
+    position: relative;
+    left: 3%;
+    background: transparent;
+  } 
 
-    .second_title {
-      color: rgb(1, 66, 156);
-      font-size: 2rem;
-      font-weight: 500;
-      position: relative;
-      left: 5px;
-    }
+  .datediv {
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 18%;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+  }
 
-    .datediv {
-      height: 45px;
-      width: 430px;
-      position: absolute;
-      top: 65px;
-      left: 30px;
-      display: flex;
-      justify-content: center;
-    }
+  .Date {
+    position: relative;
+    top:17%;
+    position: absolute;
+    left:31.5%;
+    font-size: 1.5vw;
+    margin-right: 10%;
+    background: transparent;
+  }
 
-    .Date {
-      position: absolute;
-      left: 105px;
-      top: 7px;
-      font-size: 1.2rem;
-      margin-right: 15px;
-    }
+  #date {
+    position: relative;
+    left:5.5%;
+    border-radius:10px;
+    border: solid 0.11vw black;
+    text-align: center;
+    width: 23%;
+    color: black;
+    background: white;
+  }
 
-    #date {
-      border-radius: 5px;
-      border: solid 1px black;
-      text-align: center;
-      width: 110px;
-      color: black;
-    }
+  .timeform {
+    height: 16%;
+    width: 100%;
+    position: relative;
+    top: 5.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+  }
 
-    .timeform {
-      height: 60px;
-      width: 430px;
-      position: absolute;
-      top: 195px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .timing {
+    height: 90%;
+    width: 73%;
+    /* background-color: rgb(201, 213, 230); */
+    background-color:#d5eeffec;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .timing {
-      height: 60px;
-      width: 320px;
-      background-color: rgb(201, 213, 230);
+  .from {
+    font-weight: 500;
+    margin: 2%;
+    font-size: 1.2vw;
+    background-color: transparent;
+  }
 
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .to {
+    font-weight: 500;
+    margin: 2%;
+    margin-left: 8%;
+    font-size: 1.2vw;
+    background-color: transparent;
+  }
 
-    .from {
-      font-weight: 500;
-      margin: 7px;
-    }
+  .time_from {
+    border-radius: 5px;
+    border: solid 0.2vw black;
+    margin: 2%;
+  }
 
-    .to {
-      font-weight: 500;
-      margin: 7px;
-    }
+  .time_to {
+    border-radius: 5px;
+    border: solid 0.2vw black;
+    margin: 2%;
+  }
 
-    .time_from {
-      border-radius: 5px;
-      border: solid 2px black;
-      margin: 7px;
-    }
 
-    .time_to {
-      border-radius: 5px;
-      border: solid 2px black;
-      margin: 7px;
-    }
+  #purpose {
+    position: absolute;
+    top: 69%;
+    left: 13%;
+    height: 10%;
+    width: 43%;
+    border: None;
+    border-bottom: solid 0.15vw black;
+    background: transparent;
 
-    #purpose {
-      position: absolute;
-      top: 295px;
-      left: 50px;
-      height: 30px;
-      width: 190px;
-      border: None;
-      border-bottom: solid 1.5px black;
-      margin-bottom: 10px;
-    }
+  }
 
-    #purpose:hover {
-      border: None;
-      border-bottom: solid 1.5px grey;
-    }
+  #purpose:hover {
+    border: None;
+    border-bottom: solid 0.15vw grey;
+  }
 
-    #purpose::placeholder {
-      color: rgb(63, 63, 63);
-    }
-    #purpose:focus {
-      border: None;
-      border-bottom: solid 1.5px grey;
-      outline: None;
-    }
-    .classrooms_option {
-      position: absolute;
-      top: 135px;
-      left: 115px;
-      height: 30px;
-      width: 200px;
-      border-radius: 10px;
-      border: solid 1.5px black;
-    }
+  #purpose::placeholder {
+    color: rgb(63, 63, 63);
+  }
+#purpose:focus{
+  border: None;
+  border-bottom: solid 0.15vw grey;
+  outline:None;
+}
+  .classrooms_option {
+    position: absolute;
+    top: 33%;
+    height: 7.5%;
+    width: 44%;
+    border-radius: 10px;
+    border: solid 0.15vw black;
+  }
 
-    .classrooms_option:hover {
-      border-bottom: solid 1.5px rgb(101, 101, 101);
-    }
+  .classrooms_option:hover {
+    border-bottom: solid 0.15vw rgb(101, 101, 101);
+  }
 
-    .request {
-      position: absolute;
-      top: 295px;
-      left: 280px;
-      height: 40px;
-      width: 100px;
-      border-radius: 20px;
-      background-color: blue;
-      color: white;
-      border: solid 1px white;
-    }
+  .request {
+    position: absolute;
+    top: 71%;
+    left: 65%;
+    height: 10%;
+    width: 24%;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    border: solid 0.1vw;
+    border-color: transparent;
+  }
 
-    .request:hover {
-      background-color: rgb(98, 145, 211);
-    }
-  </style>
+  .request:hover {
+    background-color: rgb(98, 145, 211);
+  }
 
-  <body>
-    <header class="header">
-      <div class="img">
-        <img src="./logo.png" alt="" />
+  .alert{
+    color:red;
+    text-align: center;
+  }
+</style>
+
+<body>
+  <header class="header">
+    <div>
+    </div>
+    <div class="img">
+      <a href="https://www.iiitdwd.ac.in"><img src="./logo.png" alt=""></a>
+  </div>
+    <div>
+    </div>
+    <div class="options">
+      <ul class="opt">
+        <li>
+            <a href="home">Home</a> 
+        </li>
+        <li>
+            <a href="book">Book</a> 
+        </li>
+        <li>
+            <a href="requests">Your Requests</a> 
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="logout">
+        <a href="/login">Sign Out</a>
       </div>
-
-      <div class="options">
-        <ul class="opt">
-          <li>
-            <a href="home">Home</a>
-          </li>
-          <li>
-            <a href="book">Book</a>
-          </li>
-          <li>
-            <a href="requests">Request</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div class="logout">
-          <a href="/login">Sign Out</a>
-        </div>
-      </div>
-    </header>
+    </div>
+  </header>
     <div id="magic" class="magic">
       <div class="magic1">
-        <video id="myVideo" autoplay muted loop width="420px" height="320px">
-          <source
-            src="https://cdn-icons-mp4.flaticon.com/512/7211/7211809.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <h2 class="magic_heading">Choose a floor</h2>
+        <h2 class="magic_heading2">from the left</h2>
       </div>
     </div>
     <!-- starting of my code ******************-->
+    <div class="color"></div>
     <p class="floorname">Floors</p>
     <div class="floors">
       <button id="" onclick="Lower()" name="lower" class="buttonfloor">
@@ -418,196 +486,190 @@
     </div>
 
     <form action="/book" method="post">
-      <div id="magic2" class="floor_div f1">
-        <div class="name">
-          <p class="first_title">Lower</p>
-          <p class="second_title">Ground</p>
-        </div>
-        <div class="datediv">
-          <p class="Date">Date</p>
-          <input id="date" type="date" name="date" required />
-        </div>
-        <div class="timeform">
-          <div class="timing">
-            <label class="from">From :</label>
-            <input class="time_from" type="time" name="start" required />
-            <label class="to">To :</label>
-            <input class="time_to" type="time" name="end" required />
-          </div>
-        </div>
-        <input
-          type="text"
-          id="purpose"
-          placeholder="Purpose..."
-          name="purpose"
-          required
-        />
-        <select class="classrooms_option" name="Classrooms" required>
-          <option disabled selected>Classrooms</option>
-          <option value="C002">C002 - 80 Seater (35 benches)</option>
-          <option value="C003">C003 - 120 Seater (32 benches)</option>
-          <option value="C004">C004 - 240 Seater</option>
-        </select>
-        <button class="request" type="submit" id="request">Request</button>
+    <div id="magic2" class="floor_div f1">
+      <div class="name">
+        <p class="first_title">Lower</p>
+        <p class="second_title">Ground</p>
       </div>
-    </form>
+      <div class="datediv">
+        <p class="Date">Date</p>
+        <input id="date" type="date" name="date">
+      </div>
+      <div class="timeform">
+        <div class="timing">
+          <label class="from">From :</label>
+          <input class="time_from" type="time" name="start">
+          <label class="to">To :</label>
+          <input class="time_to" type="time" name="end">
+        </div>
+      </div>
+      <input type="text" id="purpose" placeholder="Purpose..." name="purpose">
+      <select class="classrooms_option" name="Classrooms">
+        <option disabled selected>Classrooms</option>
+        <option value="C002">C002 - 80 Seater (35 benches)</option>
+        <option value="C003">C003 - 120 Seater (32 benches)</option>
+        <option value="C004">C004 - 240 Seater</option>
+      </select>
+      <button class="request" type="submit">Request </button>
+      
+    </div>
+</form>
 
-    <form action="/book" method="post">
-      <div id="magic3" class="floor_div f2">
-        <div class="name">
-          <p class="first_title">Upper</p>
-          <p class="second_title">Ground</p>
-        </div>
-        <div class="datediv">
-          <p class="Date">Date</p>
-          <input id="date" type="date" name="date" />
-        </div>
-        <div class="timeform">
-          <div class="timing">
-            <label class="from">From :</label>
-            <input class="time_from" type="time" name="start" />
-            <label class="to">To :</label>
-            <input class="time_to" type="time" name="end" />
-          </div>
-        </div>
-        <input
-          type="text"
-          id="purpose"
-          placeholder="Purpose..."
-          name="purpose"
-        />
-        <select class="classrooms_option" name="Classrooms">
-          <option disabled selected>Classrooms</option>
-          <option value="C101">C102 - 80 Seater (20 benches)</option>
-          <option value="C102">C103 - 80 Seater (20 benches)</option>
-          <option value="C104">C104 - 80 Seater (20 benches)</option>
-          <option value="L105">L105 - Hardware Lab (10 Setup)</option>
-          <option value="L106">L106 - Computer Lab (40 Systems)</option>
-          <option value="L107">L107 - Computer Lab (40 Sysytems)</option>
-        </select>
-        <button class="request" type="submit">Request</button>
+<form action="/book" method="post">
+    <div id="magic3" class="floor_div f2">
+      <div class="name">
+        <p class="first_title">Upper</p>
+        <p class="second_title">Ground</p>
       </div>
-    </form>
+      <div class="datediv">
+        <p class="Date">Date</p>
+        <input id="date" type="date" name="date">
+      </div>
+      <div class="timeform">
+        <div class="timing">
+          <label class="from">From :</label>
+          <input class="time_from" type="time" name="start">
+          <label class="to">To :</label>
+          <input class="time_to" type="time" name="end">
+        </div>
+      </div>
+      <input type="text" id="purpose" placeholder="Purpose..." name="purpose">
+      <select class="classrooms_option" name="Classrooms">
+        <option disabled selected>Classrooms</option>
+        <option value="C101">C102 - 80 Seater (20 benches)</option>
+        <option value="C102">C103 - 80 Seater (20 benches)</option>
+        <option value="C104">C104 - 80 Seater (20 benches)</option>
+        <option value="L105">L105 - Hardware Lab (10 Setup)</option>
+        <option value="L106">L106 - Computer Lab (40 Systems)</option>
+        <option value="L107">L107 - Computer Lab (40 Sysytems)</option>
+      </select>
+      <button class="request" type="submit">Request </button>
+      
+    </div>
 
-    <form action="/book" method="post">
-      <div id="magic4" class="floor_div f3">
-        <div class="name">
-          <p class="first_title">First</p>
-          <p class="second_title">Floor</p>
-        </div>
-        <div class="datediv">
-          <p class="Date">Date</p>
-          <input id="date" type="date" name="date" />
-        </div>
-        <div class="timeform">
-          <div class="timing">
-            <label class="from">From :</label>
-            <input class="time_from" type="time" name="start" />
-            <label class="to">To :</label>
-            <input class="time_to" type="time" name="end" />
-          </div>
-        </div>
-        <input
-          type="text"
-          id="purpose"
-          placeholder="Purpose..."
-          name="purpose"
-        />
-        <select class="classrooms_option" name="Classrooms">
-          <option disabled selected>Classrooms</option>
-          <option value="C202">C202 - 80 Seater (20 benches)</option>
-          <option value="C203">C203 - 80 Seater (24 benches)</option>
-          <option value="C204">C204 - 80 Seater (20 benches)</option>
-          <option value="C205">C205 - 80 Seater (24 benches)</option>
-          <option value="L207">L207 - Computer Lab (36 Systems)</option>
-        </select>
-        <button class="request" type="submit">Request</button>
-      </div>
-    </form>
+</form>
 
-    <form action="/book" method="post">
-      <div id="magic5" class="floor_div f4">
-        <div class="name">
-          <p class="first_title">Second</p>
-          <p class="second_title">Floor</p>
-        </div>
-        <div class="datediv">
-          <p class="Date">Date</p>
-          <input id="date" type="date" name="date" />
-        </div>
-        <div class="timeform">
-          <div class="timing">
-            <label class="from">From :</label>
-            <input class="time_from" type="time" name="start" />
-            <label class="to">To :</label>
-            <input class="time_to" type="time" name="end" />
-          </div>
-        </div>
-        <input
-          type="text"
-          id="purpose"
-          placeholder="Purpose..."
-          name="purpose"
-        />
-        <select class="classrooms_option" name="Classrooms">
-          <option disabled selected>Classrooms</option>
-          <option value="C302">C302 - 80 Seater (20benches)</option>
-          <option value="C303">C303 - 80 Seater (20benches)</option>
-          <option value="C304">C304 - 80 Seater (20benches)</option>
-          <option value="C305">C305 - 80 Seater (20benches)</option>
-        </select>
-        <button class="request" type="submit">Request</button>
+<form action="/book" method="post">
+    <div id="magic4" class="floor_div f3">
+      <div class="name">
+        <p class="first_title">First</p>
+        <p class="second_title">Floor</p>
       </div>
-    </form>
+      <div class="datediv">
+        <p class="Date">Date</p>
+        <input id="date" type="date" name="date">
+      </div>
+      <div class="timeform">
+        <div class="timing">
+          <label class="from">From :</label>
+          <input class="time_from" type="time" name="start">
+          <label class="to">To :</label>
+          <input class="time_to" type="time" name="end">
+        </div>
+      </div>
+      <input type="text" id="purpose" placeholder="Purpose..." name="purpose">
+      <select class="classrooms_option" name="Classrooms">
+        <option disabled selected>Classrooms</option>
+        <option value="C202">C202 - 80 Seater (20 benches)</option>
+        <option value="C203">C203 - 80 Seater (24 benches)</option>
+        <option value="C204">C204 - 80 Seater (20 benches)</option>
+        <option value="C205">C205 - 80 Seater (24 benches)</option>
+        <option value="L207">L207 - Computer Lab (36 Systems)</option>
+      </select>
+      <button class="request" type="submit">Request </button>
+      
+    </div>
+
+</form>
+
+<form action="/book" method="post">
+    <div id="magic5" class="floor_div f4">
+      <div class="name">
+        <p class="first_title">Second</p>
+        <p class="second_title">Floor</p>
+      </div>
+      <div class="datediv">
+        <p class="Date">Date</p>
+        <input id="date" type="date" name="date">
+      </div>
+      <div class="timeform">
+        <div class="timing">
+          <label class="from">From :</label>
+          <input class="time_from" type="time" name="start">
+          <label class="to">To :</label>
+          <input class="time_to" type="time" name="end">
+        </div>
+      </div>
+      <input type="text" id="purpose" placeholder="Purpose..." name="purpose">
+      <select class="classrooms_option" name="Classrooms">
+        <option disabled selected>Classrooms</option>
+        <option value="C302">C302 - 80 Seater (20benches)</option>
+        <option value="C303">C303 - 80 Seater (20benches)</option>
+        <option value="C304">C304 - 80 Seater (20benches)</option>
+        <option value="C305">C305 - 80 Seater (20benches)</option>
+      </select>
+      <button class="request" type="submit">Request </button>
+      
+      
+    </div>
+
+    <div class="alert">
+      <% if (alert) { %>
+       <p><%= message %> </p>
+      <% } %>
+    </div>
+
+</form>
     <script>
       function Lower() {
-        document.getElementById('magic2').style.zIndex = 1
-        document.getElementById('magic').style.zIndex = -1
-        document.getElementById('magic3').style.zIndex = -1
-        document.getElementById('magic4').style.zIndex = -1
-        document.getElementById('magic5').style.zIndex = -1
-        document.getElementById('magic2').style.opacity = '1'
-        document.getElementById('magic').style.opacity = '0'
-        document.getElementById('magic3').style.opacity = '0'
-        document.getElementById('magic4').style.opacity = '0'
-        document.getElementById('magic5').style.opacity = '0'
+        document.getElementById('magic2').style.zIndex = 1;
+        document.getElementById('magic').style.zIndex = -1;
+        document.getElementById('magic3').style.zIndex = -1;
+        document.getElementById('magic4').style.zIndex = -1;
+        document.getElementById('magic5').style.zIndex = -1;
+        document.getElementById('magic2').style.opacity = "1";
+        document.getElementById('magic').style.opacity = "0";
+        document.getElementById('magic3').style.opacity = "0";
+        document.getElementById('magic4').style.opacity = "0";
+        document.getElementById('magic5').style.opacity = "0";
       }
       function Lower2() {
-        document.getElementById('magic2').style.zIndex = -1
-        document.getElementById('magic').style.zIndex = -1
-        document.getElementById('magic3').style.zIndex = 1
-        document.getElementById('magic4').style.zIndex = -1
-        document.getElementById('magic5').style.zIndex = -1
-        document.getElementById('magic2').style.opacity = '0'
-        document.getElementById('magic').style.opacity = '0'
-        document.getElementById('magic3').style.opacity = '1'
-        document.getElementById('magic4').style.opacity = '0'
-        document.getElementById('magic5').style.opacity = '0'
+        document.getElementById('magic2').style.zIndex = -1;
+        document.getElementById('magic').style.zIndex = -1;
+        document.getElementById('magic3').style.zIndex = 1;
+        document.getElementById('magic4').style.zIndex = -1;
+        document.getElementById('magic5').style.zIndex = -1;
+        document.getElementById('magic2').style.opacity = "0";
+        document.getElementById('magic').style.opacity = "0";
+        document.getElementById('magic3').style.opacity = "1";
+        document.getElementById('magic4').style.opacity = "0";
+        document.getElementById('magic5').style.opacity = "0";
       }
       function Lower3() {
-        document.getElementById('magic2').style.zIndex = -1
-        document.getElementById('magic').style.zIndex = -1
-        document.getElementById('magic3').style.zIndex = -1
-        document.getElementById('magic4').style.zIndex = 1
-        document.getElementById('magic5').style.zIndex = -1
-        document.getElementById('magic2').style.opacity = '0'
-        document.getElementById('magic').style.opacity = '0'
-        document.getElementById('magic3').style.opacity = '0'
-        document.getElementById('magic4').style.opacity = '1'
-        document.getElementById('magic5').style.opacity = '0'
+        document.getElementById('magic2').style.zIndex = -1;
+        document.getElementById('magic').style.zIndex = -1;
+        document.getElementById('magic3').style.zIndex = -1;
+        document.getElementById('magic4').style.zIndex = 1;
+        document.getElementById('magic5').style.zIndex = -1;
+        document.getElementById('magic2').style.opacity = "0";
+        document.getElementById('magic').style.opacity = "0";
+        document.getElementById('magic3').style.opacity = "0";
+        document.getElementById('magic4').style.opacity = "1";
+        document.getElementById('magic5').style.opacity = "0";
       }
       function Lower4() {
-        document.getElementById('magic2').style.zIndex = -1
-        document.getElementById('magic').style.zIndex = -1
-        document.getElementById('magic3').style.zIndex = -1
-        document.getElementById('magic4').style.zIndex = -1
-        document.getElementById('magic5').style.zIndex = 1
-        document.getElementById('magic2').style.opacity = '0'
-        document.getElementById('magic').style.opacity = '0'
-        document.getElementById('magic3').style.opacity = '0'
-        document.getElementById('magic4').style.opacity = '0'
-        document.getElementById('magic5').style.opacity = '1'
+        document.getElementById('magic2').style.zIndex = -1;
+        document.getElementById('magic').style.zIndex = -1;
+        document.getElementById('magic3').style.zIndex = -1;
+        document.getElementById('magic4').style.zIndex = -1;
+        document.getElementById('magic5').style.zIndex = 1;
+        document.getElementById('magic2').style.opacity = "0";
+        document.getElementById('magic').style.opacity = "0";
+        document.getElementById('magic3').style.opacity = "0";
+        document.getElementById('magic4').style.opacity = "0";
+        document.getElementById('magic5').style.opacity = "1";
       }
     </script>
-  </body>
+</body>
+
 </html>
