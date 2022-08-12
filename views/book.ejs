@@ -2,694 +2,574 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <title>Book</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Room_booking</title>
+    <!-- <link rel="stylesheet" href="new_book.css"> -->
 </head>
 <style>
-  * {
-    text-decoration: none;
-    font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    margin-top: 4px;
-  }
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap');
 
-  body {
+* {
     margin: 0;
-    /* padding-left: 10px;
-    padding-right: 0px; */
-    
-  }
-.color{
-    height: 90%;
+
+}
+
+.navbar {
+    height: 70px;
     width: 100%;
-    position: absolute;
-    top:10%;
-    /* background-color:#d5eeff; */
-    background: linear-gradient(111.8deg, rgb(0, 104, 155) 19.8%, rgb(0, 173, 239) 92.1%);
-    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap');
-*{
-    padding:0px;
-    margin:0px;
-}
-.header{
-    display:grid;
-    grid-template-columns: 2% 20% 38vw 30% 10%;
-    min-width:973px;
-    min-height:50px;
-}
-.img img{
-    width:15vw;
-}
-.options ul li{
-    display:inline;
-    position:relative;
-    /* font-weight: bolder; */
-    font-size: 17px;
-    margin:15px;
-}
-.options ul li a{
-    color:rgb(2, 97, 135);
-}
-.options{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.logout{
-    padding-top: 21px;
-    
-}
-.logout a{
-    text-decoration:none;
-    color:white;
-    height:9%;
-    padding:10%;
-    background-color: blue;
-    width:100px;
-    /* font-weight: bolder; */
-    border-radius:20px;
+
+.nav {
+    height: 40px;
+    margin-right: 30px;
+    border: none;
+    background-color: transparent;
     font-family: 'Ubuntu', sans-serif;
-}
-.logout a:hover{
-    background-color: darkblue;
-}
-.opt li a{
-    text-decoration: none;
-    font-family: 'Ubuntu', sans-serif;
-}
-.opt li a:hover{
-    color:rgb(124, 7, 42);
-    transform: scale(1.1);
-    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(2, 97, 135);
 }
 
-  .all {
-    margin: 0;
-    top: 25vh;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 40vh;
-  }
-
-  .c1,
-  .c2,
-  .c3,
-  .c4 {
-    transition: transform .2s;
-  }
-
-  .c1:hover {
-    transform: scale(1.1);
-  }
-
-  .c2:hover {
-    transform: scale(1.1);
-  }
-
-  .c3:hover {
-    transform: scale(1.1);
-  }
-
-  .c4:hover {
-    transform: scale(1.1);
-  }
-
-  .log {
-    transition: transform .2s;
-  }
-
-  .log:hover {
-    color: rgb(0, 107, 255);
-    transform: scale(1.1);
-  }
-
-  .floorname {
-    position: absolute;
-    top: 31%;
-    left: 5.2%;
-    font-weight: 500;
-    font-size: 2.7vw;
-    background-color: transparent;
-    color: white;
-    
-  }
-
-  @media (max-width:550px) {
-    .floorname {
-      position: absolute;
-      left: 32px; 
-    }
-  }
-
-  .floors {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 43%;
-    left: 4%;
-    width: 9.5%;
-    height: 44%;
-    background-color: transparent;
-  }
-
-  @media (max-width:550px) {
-    .floors {
-      position: absolute;
-      left: 15px;
-    }
-  }
-
-  .buttonfloor {
-    margin-bottom: 20%;
-    height: 20%;
-    width: 100%;
-    background-color:white;
-    border-radius: 25px;
-    /* color:darkblue; */
-    color:black;
-    font-weight: 500;
-    /* border: solid 1.5px darkblue; */
-    border: solid 1.5px black; 
-    transition: 0.1s linear;
-    font-size: 1.1vw;
-  }
-
-  .buttonfloor:hover {
-    transform: scale(1.1);
-    background-color:darkblue;
-    color:white;
-    
-  }
-
-  .magic {
-    height: 68%;
-    width: 34%;
-    background-color: rgb(160, 206, 229);
-    border: solid 0.2vw;
-    position: absolute;
-    left: 32%;
-    top: 25%;
-    border-radius: 5%;
-    /* box-shadow: 0 0.4vw 0.8vw 0 rgba(255, 255, 255, 0.2), 0 0.6vw 2vw 0 rgba(255, 255, 255, 0.19); */
-    opacity: 1;
-    transition: all 0.1s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-.magic1{
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
+.nav:hover {
+    color: grey;
 }
-  .magic_heading{
-    background: transparent;
-    position:relative;
-    top:50%;
-    color:black;
-    font-size: 4vw;
-  }
-  .magic_heading2{
-    line-height: 110px;
-    background: transparent;
-    color:rgb(4, 4, 148);
-    font-size: 4vw;
-  }
-  @media (max-width:550px) {
-    .magic {
-      position: absolute;
-      left: 170px;
-    }
-  }
 
-  .f1,
-  .f2,
-  .f3,
-  .f4 {
-    position: absolute;
-    left: 32%;
-    top: 25%;
-    height: 68%;
-    width: 34%;
-    border: solid 0.2vw;
-    border-radius: 5%;
-    /* box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw white, 0.2vw 0.2vw 0.4vw 0.2vw white; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(160, 206, 229);;
-  }
-
-  @media (max-width:550px) {
-
-    .f1,
-    .f2,
-    .f3,
-    .f4 {
-      position: absolute;
-      left: 170px;
-    }
-  }
-
-  .name {
-    height: 10%;
-    width: 100%;
-    position:absolute;
-    top: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-  }
-
-  .first_title {
-    font-size: 2.7vw;
-    font-weight: 500;
-    /* border-color: transparent; */
-    background: transparent;
-  }
-
-  .second_title {
-    color: rgb(1, 66, 156);
-    font-size: 2.7vw;
-    font-weight: 500;
-    position: relative;
-    left: 3%;
-    background: transparent;
-  } 
-
-  .datediv {
-    height: 10%;
-    width: 100%;
-    position: absolute;
-    top: 18%;
-    display: flex;
-    justify-content: center;
-    background: transparent;
-  }
-
-  .Date {
-    position: relative;
-    top:17%;
-    position: absolute;
-    left:31.5%;
-    font-size: 1.5vw;
-    margin-right: 10%;
-    background: transparent;
-  }
-
-  #date {
-    position: relative;
-    left:5.5%;
-    border-radius:10px;
-    border: solid 0.11vw black;
-    text-align: center;
-    width: 23%;
-    color: black;
-    background: white;
-  }
-
-  .timeform {
-    height: 16%;
-    width: 100%;
-    position: relative;
-    top: 5.5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-  }
-
-  .timing {
-    height: 90%;
-    width: 73%;
-    /* background-color: rgb(201, 213, 230); */
-    background-color:#d5eeffec;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .from {
-    font-weight: 500;
-    margin: 2%;
-    font-size: 1.2vw;
-    background-color: transparent;
-  }
-
-  .to {
-    font-weight: 500;
-    margin: 2%;
-    margin-left: 8%;
-    font-size: 1.2vw;
-    background-color: transparent;
-  }
-
-  .time_from {
-    border-radius: 5px;
-    border: solid 0.2vw black;
-    margin: 2%;
-  }
-
-  .time_to {
-    border-radius: 5px;
-    border: solid 0.2vw black;
-    margin: 2%;
-  }
-
-
-  #purpose {
-    position: absolute;
-    top: 69%;
-    left: 13%;
-    height: 10%;
-    width: 43%;
-    border: None;
-    border-bottom: solid 0.15vw black;
-    background: transparent;
-
-  }
-
-  #purpose:hover {
-    border: None;
-    border-bottom: solid 0.15vw grey;
-  }
-
-  #purpose::placeholder {
-    color: rgb(63, 63, 63);
-  }
-#purpose:focus{
-  border: None;
-  border-bottom: solid 0.15vw grey;
-  outline:None;
-}
-  .classrooms_option {
-    position: absolute;
-    top: 33%;
-    height: 7.5%;
-    width: 44%;
-    border-radius: 10px;
-    border: solid 0.15vw black;
-  }
-
-  .classrooms_option:hover {
-    border-bottom: solid 0.15vw rgb(101, 101, 101);
-  }
-
-  .request {
-    position: absolute;
-    top: 71%;
-    left: 65%;
-    height: 10%;
-    width: 24%;
+.signout {
+    margin-right: 50px;
+    margin-left: 40px;
+    border: none;
     border-radius: 20px;
+    background-color: rgb(37, 37, 164);
+    color: white;
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+.signout:hover {
+    background-color: rgba(22, 22, 112, 0.978);
+}
+
+.floor_head {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonfloor {
+    margin: 13px;
+    height: 50px;
+    width: 140px;
+    font-size: 1.002rem;
+    color: rgb(82, 81, 81);
+    background-color: white;
+    border: solid 1.5px grey;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.second {
+    margin-top: 30px;
+}
+
+.buttonfloor:hover {
+    border: none;
+    background-color: rgba(2, 2, 247, 0.683);
+    color: white;
+}
+
+.box {
+    height: 330px;
+    width: 400px;
+    border: solid 1.5px grey;
+    border-radius: 10px;
+    position: absolute;
+    top: 230px;
+    left: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.floorname {
+    font-size: 1.9rem;
+    position: relative;
+    top: -123px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: rgb(88, 88, 88);
+}
+
+.slot_book {
+    height: 40px;
+    width: 402.4px;
+    text-align: center;
+    background-color: blue;
+    position: relative;
+    top: -106px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 15px;
+}
+
+.date {
+    height: 30px;
+    width: 110px;
+    position: relative;
+    top: -90px;
+    border: solid 1.5px grey;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 4px;
+    color: rgb(45, 45, 45);
+}
+
+.classrooms_option {
+    height: 35px;
+    width: 210px;
+    position: relative;
+    top: -70px;
+    border: solid 1.5px grey;
+    border-radius: 5px;
+    color: rgb(45, 45, 45);
+    text-align: center;
+    font-size: 0.91rem;
+}
+
+.timing {
+    height: 55px;
+    width: 300px;
+    position: relative;
+    top: -45px;
+    border-radius: 5px;
+    background-color: #d8eaf9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time1 {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(45, 45, 45);
+}
+
+.time2 {
+    padding: 2px;
+    border-radius: 3px;
+    border-color: black;
+}
+
+.first {
+    margin-right: 5px;
+}
+
+.sec {
+    margin-right: 15px;
+}
+
+.third {
+    margin-right: 5px;
+}
+
+.fourth {
+    margin-right: 5px;
+}
+
+.time2:focus {
+    outline: none;
+}
+
+.purpose_request {
+    position: relative;
+    top: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purpose {
+    height: 30px;
+    width: 180px;
+    border: solid 1.5px grey;
+    border-radius: 3px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    padding-left: 10px;
+}
+
+.request {
+    height: 35px;
+    width: 90px;
+    border: solid 1.5px blue;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    left: -2px;
     background-color: blue;
     color: white;
-    border: solid 0.1vw;
-    border-color: transparent;
-  }
-
-  .request:hover {
-    background-color: rgb(98, 145, 211);
-  }
-
-  .alert{
-    color:rgb(65, 17, 17);
-    text-align: center;
-    /* z-index: 2; */
+}
+.request:hover{
+    background-color: rgb(38, 38, 164);
+    border: solid 1.5px rgb(38, 38, 164);
+}
+.booked_slots_div{
+    height: 200px;
+    width: 430px;
     position: absolute;
-    top: 15%;
-    left: 34.5%;
-    background: transparent;
-    font-size: 2vw;
-  }
+    left:810px;
+    top:202px;
+    border:solid 1.5px grey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.booked_slots{
+    font-size: 1.9rem;
+    font-weight: 600;
+    color:rgb(88, 88, 88);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top:-91px;
+}
+.booked_floor{
+    height:54px;
+    width:432.6px;
+    font-size: 1.4rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    border:none;
+    background-color: transparent;
+    position: relative;
+    top:-75px;
+    border-radius: 10px;
+    background-color: blue;
+    color:white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.date_div{
+    width:430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    top:-50px;
+}
+.booked_date_text{
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: rgb(81, 80, 80);
+    margin-right: 15px;
+}
+.booked_date{
+    height:35px;
+    width:115px;
+    font-size: 1rem;
+    color: rgb(81, 80, 80);
+    border:solid 1.5px grey;
+    border-radius:5px;
+}
+.search{
+    height:40px;
+    width:140px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    top:-25px
+}
+.search:hover{
+    background-color: rgb(38, 38, 164);
+    border: solid 1.5px rgb(38, 38, 164);
+}
+.error{
+    background-color: red;
+    color: white;
+    position: relative;
+    top:18px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 5px;
+    height: 30px;
+    width: 100.6%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 </style>
-
 <body>
-  <header class="header">
-    <div>
+    <div class="navbar">
+        <button class="nav home">Home</button>
+        <button class="nav book">Book</button>
+        <button class="nav requests">Requests</button>
+        <button class="signout">Sign Out</button>
     </div>
-    <div class="img">
-      <a href="https://www.iiitdwd.ac.in"><img src="./logo.png" alt=""></a>
-  </div>
-    <div>
-    </div>
-    <div class="options">
-      <ul class="opt">
-        <li>
-            <a href="home">Home</a> 
-        </li>
-        <li>
-            <a href="book">Book</a> 
-        </li>
-        <li>
-            <a href="requests">Your Requests</a> 
-        </li>
-      </ul>
-    </div>
-    <div>
-      <div class="logout">
-        <a href="/login">Sign Out</a>
-      </div>
-    </div>
-  </header>
-    <div id="magic" class="magic">
-      <div class="magic1">
-        <h2 class="magic_heading">Choose a floor</h2>
-        <h2 class="magic_heading2">from the left</h2>
-      </div>
-    </div>
-    <!-- starting of my code ******************-->
-    <div class="color"></div>
-    <p class="floorname">Floors</p>
-    <div class="floors">
-      <button id="" onclick="Lower()" name="lower" class="buttonfloor">
-        Lower Ground
-      </button>
-      <button id="" onclick="Lower2()" name="lower2" class="buttonfloor">
-        Upper Ground
-      </button>
-      <button id="" onclick="Lower3()" name="lower3" class="buttonfloor">
-        First Floor
-      </button>
-      <button id="" onclick="Lower4()" name="lower4" class="buttonfloor">
-        Second Floor
-      </button>
-    </div>
-
+    <p class="floor_head">Floors
+        <button id="" onclick="Lower4()" name="lower" class="buttonfloor second">Second Floor</button>
+        <button id="" onclick="Lower3()" name="lower2" class="buttonfloor">First Floor</button>
+        <button id="" onclick="Lower2()" name="lower3" class="buttonfloor">Upper Ground</button>
+        <button id="" onclick="Lower()" name="lower4" class="buttonfloor">Lower Ground</button>
+    </p>
     <form action="/book" method="post">
-    <div id="magic2" class="floor_div f1">
-      <div class="name">
-        <p class="first_title">Lower</p>
-        <p class="second_title">Ground</p>
-      </div>
-      <div class="datediv">
-        <p class="Date">Date</p>
-        <input id="date" type="date" name="date">
-      </div>
-      <div class="timeform">
-        <div class="timing">
-          <label class="from">From :</label>
-          <input class="time_from" type="time" name="start">
-          <label class="to">To :</label>
-          <input class="time_to" type="time" name="end">
+        <div class="box" id="magic1">
+            <p class="floorname">Lower Ground</p>
+            <div class="slot_book">Slot Booking</div>
+            <input class="date" id="date" type="date" name="date">
+            <select class="classrooms_option" name="Classrooms">
+                <option disabled selected>Classrooms</option>
+                <option value="C002">C002 - 80 Seater (35 benches)</option>
+                <option value="C003">C003 - 120 Seater (32 benches)</option>
+                <option value="C004">C004 - 240 Seater</option>
+            </select>
+            <div class="timing">
+                <label class="time1 first">From :</label>
+                <input class="time2 sec" type="time" name="start">
+                <label class="time1 third">To :</label>
+                <input class="time2 fourth" type="time" name="end">
+            </div>
+            <div class="purpose_request">
+                <input class="purpose" type="text" id="purpose" placeholder="Purpose..." name="purpose">
+                <button class="request" type="submit">Request</button>
+            </div>
+            <div class="error" id="error1">This slot has already been booked</div>
         </div>
-      </div>
-      <input type="text" id="purpose" placeholder="Purpose..." name="purpose">
-      <select class="classrooms_option" name="Classrooms">
-        <option disabled selected>Classrooms</option>
-        <option value="C002">C002 - 80 Seater (35 benches)</option>
-        <option value="C003">C003 - 120 Seater (32 benches)</option>
-        <option value="C004">C004 - 240 Seater</option>
-      </select>
-      <button class="request" type="submit">Request </button>
-      
-    </div>
-</form>
-
-<form action="/book" method="post">
-    <div id="magic3" class="floor_div f2">
-      <div class="name">
-        <p class="first_title">Upper</p>
-        <p class="second_title">Ground</p>
-      </div>
-      <div class="datediv">
-        <p class="Date">Date</p>
-        <input id="date" type="date" name="date">
-      </div>
-      <div class="timeform">
-        <div class="timing">
-          <label class="from">From :</label>
-          <input class="time_from" type="time" name="start">
-          <label class="to">To :</label>
-          <input class="time_to" type="time" name="end">
+    </form>
+    <form action="/book" method="post">
+        <div class="box" id="magic2">
+            <p class="floorname">Upper Ground</p>
+            <div class="slot_book">Slot Booking</div>
+            <input class="date" id="date" type="date" name="date">
+            <select class="classrooms_option" name="Classrooms">
+                <option disabled selected>Classrooms</option>
+                <option value="C101">C102 - 80 Seater (20 benches)</option>
+                <option value="C102">C103 - 80 Seater (20 benches)</option>
+                <option value="C104">C104 - 80 Seater (20 benches)</option>
+                <option value="L105">L105 - Hardware Lab (10 Setup)</option>
+                <option value="L106">L106 - Computer Lab (40 Systems)</option>
+                <option value="L107">L107 - Computer Lab (40 Sysytems)</option>
+            </select>
+            <div class="timing">
+                <label class="time1 first">From :</label>
+                <input class="time2 sec" type="time" name="start">
+                <label class="time1 third">To :</label>
+                <input class="time2 fourth" type="time" name="end">
+            </div>
+            <div class="purpose_request">
+                <input class="purpose" type="text" id="purpose" placeholder="Purpose..." name="purpose">
+                <button class="request" type="submit">Request</button>
+            </div>
+            <div class="error" id="error2">This slot has already been booked</div>
         </div>
-      </div>
-      <input type="text" id="purpose" placeholder="Purpose..." name="purpose">
-      <select class="classrooms_option" name="Classrooms">
-        <option disabled selected>Classrooms</option>
-        <option value="C101">C102 - 80 Seater (20 benches)</option>
-        <option value="C102">C103 - 80 Seater (20 benches)</option>
-        <option value="C104">C104 - 80 Seater (20 benches)</option>
-        <option value="L105">L105 - Hardware Lab (10 Setup)</option>
-        <option value="L106">L106 - Computer Lab (40 Systems)</option>
-        <option value="L107">L107 - Computer Lab (40 Sysytems)</option>
-      </select>
-      <button class="request" type="submit">Request </button>
-      
-    </div>
-
-</form>
-
-<form action="/book" method="post">
-    <div id="magic4" class="floor_div f3">
-      <div class="name">
-        <p class="first_title">First</p>
-        <p class="second_title">Floor</p>
-      </div>
-      <div class="datediv">
-        <p class="Date">Date</p>
-        <input id="date" type="date" name="date">
-      </div>
-      <div class="timeform">
-        <div class="timing">
-          <label class="from">From :</label>
-          <input class="time_from" type="time" name="start">
-          <label class="to">To :</label>
-          <input class="time_to" type="time" name="end">
+    </form>
+    <form action="/book" method="post">
+        <div class="box" id="magic3">
+            <p class="floorname">First Floor</p>
+            <div class="slot_book">Slot Booking</div>
+            <input class="date" id="date" type="date" name="date">
+            <select class="classrooms_option" name="Classrooms">
+                <option disabled selected>Classrooms</option>
+                <option value="C202">C202 - 80 Seater (20 benches)</option>
+                <option value="C203">C203 - 80 Seater (24 benches)</option>
+                <option value="C204">C204 - 80 Seater (20 benches)</option>
+                <option value="C205">C205 - 80 Seater (24 benches)</option>
+                <option value="L207">L207 - Computer Lab (36 Systems)</option>
+            </select>
+            <div class="timing">
+                <label class="time1 first">From :</label>
+                <input class="time2 sec" type="time" name="start">
+                <label class="time1 third">To :</label>
+                <input class="time2 fourth" type="time" name="end">
+            </div>
+            <div class="purpose_request">
+                <input class="purpose" type="text" id="purpose" placeholder="Purpose..." name="purpose">
+                <button class="request" type="submit">Request</button>
+            </div>
+            <div class="error" id="error3">This slot has already been booked</div>
         </div>
-      </div>
-      <input type="text" id="purpose" placeholder="Purpose..." name="purpose">
-      <select class="classrooms_option" name="Classrooms">
-        <option disabled selected>Classrooms</option>
-        <option value="C202">C202 - 80 Seater (20 benches)</option>
-        <option value="C203">C203 - 80 Seater (24 benches)</option>
-        <option value="C204">C204 - 80 Seater (20 benches)</option>
-        <option value="C205">C205 - 80 Seater (24 benches)</option>
-        <option value="L207">L207 - Computer Lab (36 Systems)</option>
-      </select>
-      <button class="request" type="submit">Request </button>
-      
-    </div>
-
-</form>
-
-<form action="/book" method="post">
-    <div id="magic5" class="floor_div f4">
-      <div class="name">
-        <p class="first_title">Second</p>
-        <p class="second_title">Floor</p>
-      </div>
-      <div class="datediv">
-        <p class="Date">Date</p>
-        <input id="date" type="date" name="date">
-      </div>
-      <div class="timeform">
-        <div class="timing">
-          <label class="from">From :</label>
-          <input class="time_from" type="time" name="start">
-          <label class="to">To :</label>
-          <input class="time_to" type="time" name="end">
+    </form>
+    <form action="/book" method="post">
+        <div class="box" id="magic4">
+            <p class="floorname">Second Floor</p>
+            <div class="slot_book">Slot Booking</div>
+            <input class="date" id="date" type="date" name="date">
+            <select class="classrooms_option" name="Classrooms">
+                <option disabled selected>Classrooms</option>
+                <option value="C302">C302 - 80 Seater (20benches)</option>
+                <option value="C303">C303 - 80 Seater (20benches)</option>
+                <option value="C304">C304 - 80 Seater (20benches)</option>
+                <option value="C305">C305 - 80 Seater (20benches)</option>
+            </select>
+            <div class="timing">
+                <label class="time1 first">From :</label>
+                <input class="time2 sec" type="time" name="start">
+                <label class="time1 third">To :</label>
+                <input class="time2 fourth" type="time" name="end">
+            </div>
+            <div class="purpose_request">
+                <input class="purpose" type="text" id="purpose" placeholder="Purpose..." name="purpose">
+                <button class="request" type="submit">Request</button>
+            </div>
+            <div class="error" id="error4">This slot has already been booked</div>
         </div>
-      </div>
-      <input type="text" id="purpose" placeholder="Purpose..." name="purpose">
-      <select class="classrooms_option" name="Classrooms">
-        <option disabled selected>Classrooms</option>
-        <option value="C302">C302 - 80 Seater (20benches)</option>
-        <option value="C303">C303 - 80 Seater (20benches)</option>
-        <option value="C304">C304 - 80 Seater (20benches)</option>
-        <option value="C305">C305 - 80 Seater (20benches)</option>
-      </select>
-      <button class="request" type="submit">Request </button>
-      
-      
-    </div>
+    </form>
 
-    <div class="alert">
-      <% if (alert) { %>
-       <p><%= message %> </p>
-      <% } %>
-    </div>
-
-</form>
     <script>
-      function Lower() {
-        document.getElementById('magic2').style.zIndex = 1;
-        document.getElementById('magic').style.zIndex = -1;
-        document.getElementById('magic3').style.zIndex = -1;
-        document.getElementById('magic4').style.zIndex = -1;
-        document.getElementById('magic5').style.zIndex = -1;
-        document.getElementById('magic2').style.opacity = "1";
-        document.getElementById('magic').style.opacity = "0";
-        document.getElementById('magic3').style.opacity = "0";
-        document.getElementById('magic4').style.opacity = "0";
-        document.getElementById('magic5').style.opacity = "0";
-      }
-      function Lower2() {
-        document.getElementById('magic2').style.zIndex = -1;
-        document.getElementById('magic').style.zIndex = -1;
-        document.getElementById('magic3').style.zIndex = 1;
-        document.getElementById('magic4').style.zIndex = -1;
-        document.getElementById('magic5').style.zIndex = -1;
-        document.getElementById('magic2').style.opacity = "0";
-        document.getElementById('magic').style.opacity = "0";
-        document.getElementById('magic3').style.opacity = "1";
-        document.getElementById('magic4').style.opacity = "0";
-        document.getElementById('magic5').style.opacity = "0";
-      }
-      function Lower3() {
-        document.getElementById('magic2').style.zIndex = -1;
-        document.getElementById('magic').style.zIndex = -1;
-        document.getElementById('magic3').style.zIndex = -1;
-        document.getElementById('magic4').style.zIndex = 1;
-        document.getElementById('magic5').style.zIndex = -1;
-        document.getElementById('magic2').style.opacity = "0";
-        document.getElementById('magic').style.opacity = "0";
-        document.getElementById('magic3').style.opacity = "0";
-        document.getElementById('magic4').style.opacity = "1";
-        document.getElementById('magic5').style.opacity = "0";
-      }
-      function Lower4() {
-        document.getElementById('magic2').style.zIndex = -1;
-        document.getElementById('magic').style.zIndex = -1;
-        document.getElementById('magic3').style.zIndex = -1;
-        document.getElementById('magic4').style.zIndex = -1;
-        document.getElementById('magic5').style.zIndex = 1;
-        document.getElementById('magic2').style.opacity = "0";
-        document.getElementById('magic').style.opacity = "0";
-        document.getElementById('magic3').style.opacity = "0";
-        document.getElementById('magic4').style.opacity = "0";
-        document.getElementById('magic5').style.opacity = "1";
-      }
+        function Lower() {
+            document.getElementById('magic1').style.zIndex = 1;
+            document.getElementById('magic2').style.zIndex = -1;
+            document.getElementById('magic3').style.zIndex = -1;
+            document.getElementById('magic4').style.zIndex = -1;
+            document.getElementById('booked1').style.zIndex = 1;
+            document.getElementById('booked2').style.zIndex = -1;
+            document.getElementById('booked3').style.zIndex = -1;
+            document.getElementById('booked4').style.zIndex = -1;
+            document.getElementById('magic1').style.opacity = "1";
+            document.getElementById('magic2').style.opacity = "0";
+            document.getElementById('magic3').style.opacity = "0";
+            document.getElementById('magic4').style.opacity = "0";
+            document.getElementById('booked1').style.opacity = "1";
+            document.getElementById('booked2').style.opacity = "0";
+            document.getElementById('booked3').style.opacity = "0";
+            document.getElementById('booked4').style.opacity = "0";
+            document.getElementById('error1').style.opacity = "0";
+        }
+        function Lower2() {
+            document.getElementById('magic1').style.zIndex = -1;
+            document.getElementById('magic2').style.zIndex = 1;
+            document.getElementById('magic3').style.zIndex = -1;
+            document.getElementById('magic4').style.zIndex = -1;
+            document.getElementById('booked1').style.zIndex = -1;
+            document.getElementById('booked2').style.zIndex = 1;
+            document.getElementById('booked3').style.zIndex = -1;
+            document.getElementById('booked4').style.zIndex = -1;
+            document.getElementById('magic1').style.opacity = "0";
+            document.getElementById('magic2').style.opacity = "1";
+            document.getElementById('magic3').style.opacity = "0";
+            document.getElementById('magic4').style.opacity = "0";
+            document.getElementById('booked1').style.opacity = "0";
+            document.getElementById('booked2').style.opacity = "1";
+            document.getElementById('booked3').style.opacity = "0";
+            document.getElementById('booked4').style.opacity = "0";
+            document.getElementById('error2').style.opacity = "0";
+        }
+        function Lower3() {
+            document.getElementById('magic1').style.zIndex = -1;
+            document.getElementById('magic2').style.zIndex = -1;
+            document.getElementById('magic3').style.zIndex = 1;
+            document.getElementById('magic4').style.zIndex = -1;
+            document.getElementById('booked1').style.zIndex = -1;
+            document.getElementById('booked2').style.zIndex = -1;
+            document.getElementById('booked3').style.zIndex = 1;
+            document.getElementById('booked4').style.zIndex = -1;
+            document.getElementById('magic1').style.opacity = "0";
+            document.getElementById('magic2').style.opacity = "0";
+            document.getElementById('magic3').style.opacity = "1";
+            document.getElementById('magic4').style.opacity = "0";
+            document.getElementById('booked1').style.opacity = "0";
+            document.getElementById('booked2').style.opacity = "0";
+            document.getElementById('booked3').style.opacity = "1";
+            document.getElementById('booked4').style.opacity = "0";
+            document.getElementById('error3').style.opacity = "0";
+        }
+        function Lower4() {
+            document.getElementById('magic1').style.zIndex = -1;
+            document.getElementById('magic2').style.zIndex = -1;
+            document.getElementById('magic3').style.zIndex = -1;
+            document.getElementById('magic4').style.zIndex = 1;
+            document.getElementById('booked1').style.zIndex = -1;
+            document.getElementById('booked2').style.zIndex = -1;
+            document.getElementById('booked3').style.zIndex = -1;
+            document.getElementById('booked4').style.zIndex = 1;
+            //   document.getElementById('magic5').style.zIndex = 1;
+            document.getElementById('magic1').style.opacity = "0";
+            document.getElementById('magic2').style.opacity = "0";
+            document.getElementById('magic3').style.opacity = "0";
+            document.getElementById('magic4').style.opacity = "1";
+            document.getElementById('booked1').style.opacity = "0";
+            document.getElementById('booked2').style.opacity = "0";
+            document.getElementById('booked3').style.opacity = "0";
+            document.getElementById('booked4').style.opacity = "1";
+            document.getElementById('error4').style.opacity = "0";
+            //   document.getElementById('magic5').style.opacity = "1";
+        }
+        const today = new Date()
+        const year = today.getFullYear()
+        let month = parseInt(today.getMonth()) + 1
+        if (month < 10) {
+            month = '0' + month
+        }
+        const date = today.getDate()
 
-      const today = new Date()
-    const year = today.getFullYear()
-    let month = parseInt(today.getMonth()) + 1
-    if(month<10){
-      month = '0' + month
-    }
-    const date = today.getDate()
+        const tdate = year + '-' + month + '-' + date
 
-    const tdate = year + '-' + month + '-' + date
-
-    document.querySelectorAll('input[type="date"]').forEach(e => {
-    e.setAttribute('min', tdate)
-})
-
+        document.querySelectorAll('input[type="date"]').forEach(e => {
+            e.setAttribute('min', tdate)
+        })
     </script>
+    <div class="booked_slots_div" id="booked1">
+        <p class="booked_slots">Check Booked Slots</p>
+        <button class="booked_floor">Lower Ground</button>
+        <div class="date_div">
+            <p class="booked_date_text">Pick a Date :</p>
+            <input class="booked_date" id="date" type="date" name="date">
+        </div>
+        <button class="search">Search</button>
+    </div>
+    <div class="booked_slots_div" id="booked2">
+        <p class="booked_slots">Check Booked Slots</p>
+        <button class="booked_floor">Upper Ground</button>
+        <div class="date_div">
+            <p class="booked_date_text">Pick a Date :</p>
+            <input class="booked_date" id="date" type="date" name="date">
+        </div>
+        <button class="search">Search</button>
+    </div>
+    <div class="booked_slots_div" id="booked3">
+        <p class="booked_slots">Check Booked Slots</p>
+        <button class="booked_floor">First Floor</button>
+        <div class="date_div">
+            <p class="booked_date_text">Pick a Date :</p>
+            <input class="booked_date" id="date" type="date" name="date">
+        </div>
+        <button class="search">Search</button>
+    </div>
+    <div class="booked_slots_div" id="booked4">
+        <p class="booked_slots">Check Booked Slots</p>
+        <button class="booked_floor">Second Floor</button>
+        <div class="date_div">
+            <p class="booked_date_text">Pick a Date :</p>
+            <input class="booked_date" id="date" type="date" name="date">
+        </div>
+        <button class="search">Search</button>
+    </div>
 </body>
 
 </html>
