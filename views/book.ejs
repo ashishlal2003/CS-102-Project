@@ -327,10 +327,10 @@
 </style>
 <body>
     <div class="navbar">
-        <button class="nav home">Home</button>
-        <button class="nav book">Book</button>
-        <button class="nav requests">Requests</button>
-        <button class="signout">Sign Out</button>
+        <a href="home" class="nav home">Home</a>
+        <a href="book" class="nav book">Book</a>
+        <a href="requests" class="nav requests">Requests</a>
+        <a href="/login" class="signout">Sign Out</a>
     </div>
     <p class="floor_head">Floors
         <button id="" onclick="Lower4()" name="lower" class="buttonfloor second">Second Floor</button>
@@ -437,28 +437,30 @@
                 <input class="purpose" type="text" id="purpose" placeholder="Purpose..." name="purpose">
                 <button class="request" type="submit">Request</button>
             </div>
-            <div class="error" id="error4">This slot has already been booked</div>
+            <div id="error" >This slot has already been booked</div>
         </div>
     </form>
 
     <script>
+            document.getElementById('magic1').style.zIndex = 1;
+            document.getElementById('magic2').style.zIndex = -1;
+            document.getElementById('magic3').style.zIndex = -1;
+            document.getElementById('magic4').style.zIndex = -1;
+
+            document.getElementById('magic1').style.opacity = "1";
+            document.getElementById('magic2').style.opacity = "0";
+            document.getElementById('magic3').style.opacity = "0";
+            document.getElementById('magic4').style.opacity = "0";
+
         function Lower() {
             document.getElementById('magic1').style.zIndex = 1;
             document.getElementById('magic2').style.zIndex = -1;
             document.getElementById('magic3').style.zIndex = -1;
             document.getElementById('magic4').style.zIndex = -1;
-            document.getElementById('booked1').style.zIndex = 1;
-            document.getElementById('booked2').style.zIndex = -1;
-            document.getElementById('booked3').style.zIndex = -1;
-            document.getElementById('booked4').style.zIndex = -1;
             document.getElementById('magic1').style.opacity = "1";
             document.getElementById('magic2').style.opacity = "0";
             document.getElementById('magic3').style.opacity = "0";
             document.getElementById('magic4').style.opacity = "0";
-            document.getElementById('booked1').style.opacity = "1";
-            document.getElementById('booked2').style.opacity = "0";
-            document.getElementById('booked3').style.opacity = "0";
-            document.getElementById('booked4').style.opacity = "0";
             document.getElementById('error1').style.opacity = "0";
         }
         function Lower2() {
@@ -466,18 +468,10 @@
             document.getElementById('magic2').style.zIndex = 1;
             document.getElementById('magic3').style.zIndex = -1;
             document.getElementById('magic4').style.zIndex = -1;
-            document.getElementById('booked1').style.zIndex = -1;
-            document.getElementById('booked2').style.zIndex = 1;
-            document.getElementById('booked3').style.zIndex = -1;
-            document.getElementById('booked4').style.zIndex = -1;
             document.getElementById('magic1').style.opacity = "0";
             document.getElementById('magic2').style.opacity = "1";
             document.getElementById('magic3').style.opacity = "0";
             document.getElementById('magic4').style.opacity = "0";
-            document.getElementById('booked1').style.opacity = "0";
-            document.getElementById('booked2').style.opacity = "1";
-            document.getElementById('booked3').style.opacity = "0";
-            document.getElementById('booked4').style.opacity = "0";
             document.getElementById('error2').style.opacity = "0";
         }
         function Lower3() {
@@ -485,18 +479,10 @@
             document.getElementById('magic2').style.zIndex = -1;
             document.getElementById('magic3').style.zIndex = 1;
             document.getElementById('magic4').style.zIndex = -1;
-            document.getElementById('booked1').style.zIndex = -1;
-            document.getElementById('booked2').style.zIndex = -1;
-            document.getElementById('booked3').style.zIndex = 1;
-            document.getElementById('booked4').style.zIndex = -1;
             document.getElementById('magic1').style.opacity = "0";
             document.getElementById('magic2').style.opacity = "0";
             document.getElementById('magic3').style.opacity = "1";
             document.getElementById('magic4').style.opacity = "0";
-            document.getElementById('booked1').style.opacity = "0";
-            document.getElementById('booked2').style.opacity = "0";
-            document.getElementById('booked3').style.opacity = "1";
-            document.getElementById('booked4').style.opacity = "0";
             document.getElementById('error3').style.opacity = "0";
         }
         function Lower4() {
@@ -504,21 +490,11 @@
             document.getElementById('magic2').style.zIndex = -1;
             document.getElementById('magic3').style.zIndex = -1;
             document.getElementById('magic4').style.zIndex = 1;
-            document.getElementById('booked1').style.zIndex = -1;
-            document.getElementById('booked2').style.zIndex = -1;
-            document.getElementById('booked3').style.zIndex = -1;
-            document.getElementById('booked4').style.zIndex = 1;
-            //   document.getElementById('magic5').style.zIndex = 1;
             document.getElementById('magic1').style.opacity = "0";
             document.getElementById('magic2').style.opacity = "0";
             document.getElementById('magic3').style.opacity = "0";
             document.getElementById('magic4').style.opacity = "1";
-            document.getElementById('booked1').style.opacity = "0";
-            document.getElementById('booked2').style.opacity = "0";
-            document.getElementById('booked3').style.opacity = "0";
-            document.getElementById('booked4').style.opacity = "1";
             document.getElementById('error4').style.opacity = "0";
-            //   document.getElementById('magic5').style.opacity = "1";
         }
         const today = new Date()
         const year = today.getFullYear()
@@ -534,42 +510,6 @@
             e.setAttribute('min', tdate)
         })
     </script>
-    <div class="booked_slots_div" id="booked1">
-        <p class="booked_slots">Check Booked Slots</p>
-        <button class="booked_floor">Lower Ground</button>
-        <div class="date_div">
-            <p class="booked_date_text">Pick a Date :</p>
-            <input class="booked_date" id="date" type="date" name="date">
-        </div>
-        <button class="search">Search</button>
-    </div>
-    <div class="booked_slots_div" id="booked2">
-        <p class="booked_slots">Check Booked Slots</p>
-        <button class="booked_floor">Upper Ground</button>
-        <div class="date_div">
-            <p class="booked_date_text">Pick a Date :</p>
-            <input class="booked_date" id="date" type="date" name="date">
-        </div>
-        <button class="search">Search</button>
-    </div>
-    <div class="booked_slots_div" id="booked3">
-        <p class="booked_slots">Check Booked Slots</p>
-        <button class="booked_floor">First Floor</button>
-        <div class="date_div">
-            <p class="booked_date_text">Pick a Date :</p>
-            <input class="booked_date" id="date" type="date" name="date">
-        </div>
-        <button class="search">Search</button>
-    </div>
-    <div class="booked_slots_div" id="booked4">
-        <p class="booked_slots">Check Booked Slots</p>
-        <button class="booked_floor">Second Floor</button>
-        <div class="date_div">
-            <p class="booked_date_text">Pick a Date :</p>
-            <input class="booked_date" id="date" type="date" name="date">
-        </div>
-        <button class="search">Search</button>
-    </div>
 </body>
 
 </html>
