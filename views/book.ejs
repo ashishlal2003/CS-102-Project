@@ -10,12 +10,15 @@
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap');
-
 * {
     margin: 0;
-
 }
-
+.img img{
+    position:absolute;
+    top:5px;
+    left:20px;
+    width:14vw;
+}
 .navbar {
     height: 70px;
     width: 100%;
@@ -24,37 +27,36 @@
     justify-content: flex-end;
     align-items: center;
 }
-
 .nav {
-    height: 40px;
+    height: 25px;
     margin-right: 30px;
     border: none;
     background-color: transparent;
     font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
     font-size: 1.1rem;
     font-weight: 600;
-    color: rgb(2, 97, 135);
+    color: rgb(2, 97,  135);
 }
-
 .nav:hover {
     color: grey;
 }
-
 .signout {
-    margin-right: 50px;
-    margin-left: 40px;
+    margin-right: 25px;
+    margin-left: 10px;
     border: none;
     border-radius: 20px;
     background-color: rgb(37, 37, 164);
     color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
     font-size: 0.9rem;
+    font-weight: 600;
     padding: 15px;
 }
-
 .signout:hover {
     background-color: rgba(22, 22, 112, 0.978);
 }
-
 .floor_head {
     font-size: 2.5rem;
     font-weight: 600;
@@ -67,7 +69,6 @@
     align-items: center;
     flex-direction: column;
 }
-
 .buttonfloor {
     margin: 13px;
     height: 50px;
@@ -79,31 +80,27 @@
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
-
 .second {
     margin-top: 30px;
 }
-
 .buttonfloor:hover {
     border: none;
     background-color: rgba(2, 2, 247, 0.683);
     color: white;
 }
-
 .box {
-    height: 330px;
-    width: 400px;
+    height: 380px;
+    width: 450px;
     border: solid 1.5px grey;
     border-radius: 10px;
     position: absolute;
-    top: 230px;
-    left: 320px;
+    top: 200px;
+    left: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 .floorname {
     font-size: 1.9rem;
     position: relative;
@@ -112,10 +109,9 @@
     font-weight: 600;
     color: rgb(88, 88, 88);
 }
-
 .slot_book {
     height: 40px;
-    width: 402.4px;
+    width: 453px;
     text-align: center;
     background-color: blue;
     position: relative;
@@ -129,7 +125,6 @@
     font-family: 'Ubuntu', sans-serif;
     padding-top: 15px;
 }
-
 .date {
     height: 30px;
     width: 110px;
@@ -141,7 +136,6 @@
     padding: 4px;
     color: rgb(45, 45, 45);
 }
-
 .classrooms_option {
     height: 35px;
     width: 210px;
@@ -153,7 +147,6 @@
     text-align: center;
     font-size: 0.91rem;
 }
-
 .timing {
     height: 55px;
     width: 300px;
@@ -165,40 +158,32 @@
     justify-content: center;
     align-items: center;
 }
-
 .time1 {
     font-size: 1rem;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(45, 45, 45);
 }
-
 .time2 {
     padding: 2px;
     border-radius: 3px;
     border-color: black;
 }
-
 .first {
     margin-right: 5px;
 }
-
 .sec {
     margin-right: 15px;
 }
-
 .third {
     margin-right: 5px;
 }
-
 .fourth {
     margin-right: 5px;
 }
-
 .time2:focus {
     outline: none;
 }
-
 .purpose_request {
     position: relative;
     top: -15px;
@@ -206,7 +191,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .purpose {
     height: 30px;
     width: 180px;
@@ -218,7 +202,6 @@
     position: relative;
     padding-left: 10px;
 }
-
 .request {
     height: 35px;
     width: 90px;
@@ -314,7 +297,7 @@
     background-color: red;
     color: white;
     position: relative;
-    top:18px;
+    top:45px;
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -327,6 +310,9 @@
 </style>
 <body>
     <div class="navbar">
+        <div class="img">
+            <a href="https://iiitdwd.ac.in/"><img src="https://iiitdwd.ac.in/img/logon.png" alt="iiitdwd"></a>
+        </div>
         <a href="home" class="nav home">Home</a>
         <a href="book" class="nav book">Book</a>
         <a href="requests" class="nav requests">Requests</a>
@@ -437,7 +423,7 @@
                 <input class="purpose" type="text" id="purpose" placeholder="Purpose..." name="purpose">
                 <button class="request" type="submit">Request</button>
             </div>
-            <div id="error" >This slot has already been booked</div>
+            <div class="error" id="error4">This slot has already been booked</div>
         </div>
     </form>
 
@@ -446,12 +432,10 @@
             document.getElementById('magic2').style.zIndex = -1;
             document.getElementById('magic3').style.zIndex = -1;
             document.getElementById('magic4').style.zIndex = -1;
-
             document.getElementById('magic1').style.opacity = "1";
             document.getElementById('magic2').style.opacity = "0";
             document.getElementById('magic3').style.opacity = "0";
             document.getElementById('magic4').style.opacity = "0";
-
         function Lower() {
             document.getElementById('magic1').style.zIndex = 1;
             document.getElementById('magic2').style.zIndex = -1;
@@ -503,9 +487,7 @@
             month = '0' + month
         }
         const date = today.getDate()
-
         const tdate = year + '-' + month + '-' + date
-
         document.querySelectorAll('input[type="date"]').forEach(e => {
             e.setAttribute('min', tdate)
         })
