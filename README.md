@@ -29,4 +29,4 @@ Following are the necessary links:
 https://www.mongodb.com/try/download/compass
 https://nodejs.org/en/download/
 
-For any further clarifications, contact 21bcs011@iiitdwd.ac.in (Ankur De)
+For any further clarifications, contact 21bcs011@iiitdwd.ac.in (Ankur De) or 21bcs017@iiitdwd.ac.in (Ashish Lal)
