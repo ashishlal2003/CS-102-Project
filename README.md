@@ -3,7 +3,7 @@ Kindly download CS-102-Project-main folder from Google Drive, NodeJS, MongoDB Co
 After completion, open the folder in a code editor (eg. Microsoft Visual Studio Code).
 Then follow the given steps:
 
-1. Open app.js and open up terminal at that location.
+1. Open app.js and open the terminal on that location.
 
 2. Set up npm using the following command:
 	npm init -y
